@@ -1,0 +1,147 @@
+year,name,region,psychiatrist_count
+2017,Marshall Islands,Western Pacific,0
+2017,Burundi,Africa,0.01
+2017,Central African Republic,Africa,0.022
+2017,Sierra Leone,Africa,0.041
+2017,Eswatini,Africa,0.076
+2017,Ethiopia,Africa,0.076
+2017,Comoros,Africa,0.13
+2017,Iraq,Eastern Mediterranean,0.34
+2017,Sri Lanka,South-East Asia,0.52
+2017,Equatorial Guinea,Africa,0.68
+2017,Nicaragua,Americas,0.69
+2017,The former Yugoslav Republic of Macedonia,Europe,14.43
+2017,Canada,Americas,14.68
+2017,Iran (Islamic Republic of),Eastern Mediterranean,2.02
+2017,Mauritius,Africa,2.38
+2017,Maldives,South-East Asia,2.39
+2017,France,Europe,20.91
+2017,Finland,Europe,23.59
+2017,Bahrain,Eastern Mediterranean,5.47
+2017,Saint Kitts and Nevis,Americas,5.53
+2017,Serbia,Europe,8.64
+2016,Chad,Africa,0.007
+2016,Niger,Africa,0.014
+2016,Guinea,Africa,0.025
+2016,South Sudan,Africa,0.025
+2016,Mali,Africa,0.029
+2016,Burkina Faso,Africa,0.039
+2016,Liberia,Africa,0.044
+2016,Mozambique,Africa,0.046
+2016,Togo,Africa,0.054
+2016,Zambia,Africa,0.056
+2016,Angola,Africa,0.057
+2016,Ghana,Africa,0.058
+2016,Madagascar,Africa,0.058
+2016,Rwanda,Africa,0.06
+2016,Haiti,Americas,0.075
+2016,Congo,Africa,0.08
+2016,Timor-Leste,South-East Asia,0.081
+2016,Uganda,Africa,0.082
+2016,Zimbabwe,Africa,0.095
+2016,Gambia,Africa,0.1
+2016,Bangladesh,South-East Asia,0.13
+2016,Côte d’Ivoire,Africa,0.13
+2016,Kenya,Africa,0.18
+2016,Senegal,Africa,0.2
+2016,Yemen,Eastern Mediterranean,0.2
+2016,Mexico,Americas,0.21
+2016,Fiji,Western Pacific,0.22
+2016,Afghanistan,Eastern Mediterranean,0.23
+2016,Gabon,Africa,0.26
+2016,India,South-East Asia,0.29
+2016,Indonesia,South-East Asia,0.31
+2016,Nepal,South-East Asia,0.36
+2016,Namibia,Africa,0.37
+2016,Syrian Arab Republic,Eastern Mediterranean,0.37
+2016,Myanmar,South-East Asia,0.38
+2016,Vanuatu,Western Pacific,0.38
+2016,Cambodia,Western Pacific,0.39
+2016,Ecuador,Americas,0.46
+2016,Guatemala,Americas,0.49
+2016,Bhutan,South-East Asia,0.51
+2016,Sao Tome and Principe,Africa,0.51
+2016,Philippines,Western Pacific,0.52
+2016,Saint Lucia,Americas,0.56
+2016,Thailand,South-East Asia,0.72
+2016,Morocco,Eastern Mediterranean,0.84
+2016,El Salvador,Americas,0.89
+2016,Guyana,Americas,0.91
+2016,Antigua and Barbuda,Americas,1
+2016,Malaysia,Western Pacific,1.05
+2016,Jordan,Eastern Mediterranean,1.12
+2016,Bolivia (Plurinational State of),Americas,1.13
+2016,Brunei Darussalam,Western Pacific,1.2
+2016,Suriname,Americas,1.27
+2016,Saudi Arabia,Eastern Mediterranean,1.32
+2016,Belize,Americas,1.39
+2016,Tajikistan,Europe,1.39
+2016,Albania,Europe,1.47
+2016,South Africa,Africa,1.52
+2016,Samoa,Western Pacific,1.55
+2016,Egypt,Eastern Mediterranean,1.6
+2016,Turkey,Europe,1.64
+2016,United Arab Emirates,Eastern Mediterranean,1.65
+2016,Kyrgyzstan,Europe,1.69
+2016,Colombia,Americas,1.84
+2016,Grenada,Americas,1.87
+2016,United States of America,Americas,10.54
+2016,Hungary,Europe,11.08
+2016,Croatia,Europe,11.1
+2016,Japan,Western Pacific,11.87
+2016,Slovenia,Europe,11.95
+2016,Belarus,Europe,13.5
+2016,Uruguay,Americas,14.13
+2016,Estonia,Europe,16.19
+2016,Lithuania,Europe,18.45
+2016,Seychelles,Africa,2.13
+2016,Dominican Republic,Americas,2.28
+2016,Uzbekistan,Europe,2.61
+2016,Qatar,Eastern Mediterranean,2.71
+2016,Tonga,Western Pacific,2.82
+2016,Peru,Americas,2.95
+2016,Sweden,Europe,20.86
+2016,Argentina,Americas,21.71
+2016,Poland,Europe,24.18
+2016,New Zealand,Western Pacific,28.54
+2016,Brazil,Americas,3.16
+2016,Azerbaijan,Europe,3.45
+2016,Armenia,Europe,3.84
+2016,Costa Rica,Americas,3.93
+2016,Monaco,Europe,31.33
+2016,Mongolia,Western Pacific,4.03
+2016,Panama,Americas,4.03
+2016,Singapore,Western Pacific,4.19
+2016,Norway,Europe,48.04
+2016,Romania,Europe,5.66
+2016,Cook Islands,Western Pacific,5.73
+2016,Republic of Korea,Western Pacific,5.79
+2016,Greece,Europe,5.8
+2016,Georgia,Europe,6.71
+2016,Ukraine,Europe,6.93
+2016,Chile,Americas,6.97
+2016,Bulgaria,Europe,7.2
+2016,Montenegro,Europe,8.28
+2016,Cuba,Americas,9.06
+2016,Israel,Europe,9.87
+2015,United Republic of Tanzania,Africa,0.056
+2015,Sudan,Eastern Mediterranean,0.08
+2015,Jamaica,Americas,1.15
+2015,Lebanon,Eastern Mediterranean,1.21
+2015,Oman,Eastern Mediterranean,1.74
+2015,Czechia,Europe,12.36
+2015,Germany,Europe,13.2
+2015,Australia,Western Pacific,13.53
+2015,Luxembourg,Europe,17.82
+2015,China,Western Pacific,2.2
+2015,Netherlands,Europe,20.87
+2015,Republic of Moldova,Europe,4.55
+2015,Switzerland,Europe,43.96
+2015,Italy,Europe,5.98
+2015,Bosnia and Herzegovina,Europe,8.03
+2015,Russian Federation,Europe,8.48
+2015,Spain,Europe,9.69
+2015,Latvia,Europe,9.99
+2014,Honduras,Americas,0.66
+2013,Mauritania,Africa,0.072
+2013,Belgium,Europe,20.06
