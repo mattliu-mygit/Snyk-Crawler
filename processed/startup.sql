@@ -70,7 +70,7 @@ CREATE TABLE Patient_Ledger (
   PRIMARY KEY(year, country, type_of),
   FOREIGN KEY(type_of) REFERENCES Facility(type_of),
   FOREIGN KEY(country) REFERENCES Facility(country),
-  FOREIGN KEY(year) REFERENCES Facility(year),
+  FOREIGN KEY(year) REFERENCES Facility(year)
 );
 LOAD DATA LOCAL INFILE './country.csv' INTO TABLE Country FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './facility.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';
