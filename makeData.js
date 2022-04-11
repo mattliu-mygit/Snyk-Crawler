@@ -144,10 +144,10 @@ toJSON()
                   dayTreatmentJSON.non_drug_alc_count = (
                     Math.random() * 0.2
                   ).toFixed(2);
-                  dayTreatmentJSON.drug_alc_count = (
+                  const drugAlcCount =
                     Math.random() * 0.3 +
-                    dayTreatmentJSON.non_drug_and_alcohol_count
-                  ).toFixed(2);
+                    parseFloat(dayTreatmentJSON.non_drug_alc_count);
+                  dayTreatmentJSON.drug_alc_count = drugAlcCount.toFixed(2);
                 });
 
                 const csvWriterDay = createCsvWriter({
