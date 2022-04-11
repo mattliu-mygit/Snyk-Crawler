@@ -70,7 +70,7 @@ toJSON()
                     type: "outpatient facility",
                     year: outpatientJSON.Period,
                     country: outpatientJSON.Location,
-                    avg_stay: Math.floor(Math.random() * 354),
+                    avg_stay: 0,
                     cost: Math.floor(Math.random() * 50),
                     unit_count: outpatientJSON.FactValueNumeric,
                   });
