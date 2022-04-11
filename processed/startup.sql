@@ -1,13 +1,3 @@
-SET FOREIGN_KEY_CHECKS = 0;
--- to disable them
-DROP TABLE Country;
-DROP TABLE Suicide_Rates;
-DROP TABLE Mental_Hospital;
-DROP TABLE Facility;
-DROP TABLE Outpatient;
-DROP TABLE General_Hospital;
-DROP TABLE Day_Treatment;
-SET FOREIGN_KEY_CHECKS = 1;
 CREATE TABLE Country (
   name varchar(50),
   region varchar(10),
@@ -70,11 +60,23 @@ CREATE TABLE Day_Treatment (
   FOREIGN KEY(country) REFERENCES Facility(country),
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
--- to re-enable them
+CREATE TABLE Patient_Ledger (
+  type varchar(50),
+  year int,
+  country varchar(50),
+  cost int,
+  diagnoses_count int,
+  patient_count int,
+  PRIMARY KEY(year, country, type),
+  FOREIGN KEY(type) REFERENCES Facility(type),
+  FOREIGN KEY(country) REFERENCES Facility(country),
+  FOREIGN KEY(year) REFERENCES Facility(year),
+);
 LOAD DATA LOCAL INFILE './country.csv' INTO TABLE Country FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE './suicide.csv' INTO TABLE Suicide_Rates FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './facility.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './suicide.csv' INTO TABLE Suicide_Rates FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './mh.csv' INTO TABLE Mental_Hospital FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './mhu.csv' INTO TABLE General_Hospital FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './outpatient.csv' INTO TABLE Outpatient FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './day_treatment.csv' INTO TABLE Day_Treatment FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './patientledger.csv' INTO TABLE Patient_Ledger FIELDS TERMINATED BY ',';

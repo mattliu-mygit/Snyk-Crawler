@@ -160,7 +160,7 @@ toJSON()
                     type: "day treatment facility",
                     year: dayTreatmentJSON.Period,
                     country: dayTreatmentJSON.Location,
-                    avg_stay: Math.floor(Math.random() * 354),
+                    avg_stay: 0,
                     cost: Math.floor(Math.random() * 50),
                     unit_count: dayTreatmentJSON.FactValueNumeric,
                   });
