@@ -19,7 +19,7 @@ CREATE TABLE Facility (
   avg_stay int,
   cost int,
   unit_count float,
-  PRIMARY KEY(type_of, year, country,
+  PRIMARY KEY(type_of, year, country),
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Mental_Hospital (
