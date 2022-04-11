@@ -1,132 +1,132 @@
-year,country,ptsd_count,depression_count,depression_count
-2017,Ethiopia,46,59,59
-2017,Sri Lanka,70,22,22
-2017,Iraq,21,5,5
-2017,Somalia,94,72,72
-2017,Tunisia,92,90,90
-2017,Burundi,87,63,63
-2017,Sierra Leone,96,3,3
-2017,Nicaragua,87,94,94
-2017,Iran (Islamic Republic of),64,53,53
-2017,Canada,42,60,60
-2017,Trinidad and Tobago,28,54,54
-2017,Eswatini,53,77,77
-2017,Mauritius,64,1,1
-2017,Serbia,51,73,73
-2017,Equatorial Guinea,5,79,79
-2017,Botswana,85,69,69
-2017,The former Yugoslav Republic of Macedonia,65,19,19
-2017,Bahrain,57,20,20
-2017,Saint Vincent and the Grenadines,74,47,47
-2016,Tonga,71,16,16
-2016,Bangladesh,59,89,89
-2016,Philippines,12,77,77
-2016,Kenya,27,73,73
-2016,Uganda,82,14,14
-2016,Afghanistan,10,68,68
-2016,Myanmar,27,83,83
-2016,Guatemala,14,14,14
-2016,Pakistan,31,8,8
-2016,Mozambique,40,62,62
-2016,Senegal,62,98,98
-2016,Côte d’Ivoire,64,71,71
-2016,India,42,47,47
-2016,Peru,21,64,64
-2016,Angola,54,57,57
-2016,Ghana,0,78,78
-2016,United Arab Emirates,36,15,15
-2016,Turkey,21,30,30
-2016,Malaysia,71,19,19
-2016,Togo,72,19,19
-2016,Syrian Arab Republic,35,33,33
-2016,Rwanda,40,21,21
-2016,Singapore,5,68,68
-2016,Egypt,33,39,39
-2016,Haiti,85,25,25
-2016,Indonesia,43,29,29
-2016,Eritrea,84,44,44
-2016,Madagascar,9,89,89
-2016,Nepal,66,47,47
-2016,Liberia,32,3,3
-2016,Chile,44,74,74
-2016,Ecuador,46,46,46
-2016,Panama,17,50,50
-2016,Zimbabwe,6,87,87
-2016,Greece,24,78,78
-2016,Thailand,74,48,48
-2016,Mexico,83,70,70
-2016,Portugal,62,87,87
-2016,Paraguay,97,42,42
-2016,El Salvador,31,57,57
-2016,Libya,97,12,12
-2016,Morocco,20,20,20
-2016,Yemen,44,99,99
-2016,Mongolia,84,92,92
-2016,Tajikistan,42,1,1
-2016,Qatar,66,42,42
-2016,Costa Rica,83,6,6
-2016,Viet Nam,85,58,58
-2016,Algeria,20,21,21
-2016,Gabon,47,88,88
-2016,Jordan,54,7,7
-2016,Guinea-Bissau,14,28,28
-2016,Zambia,79,12,12
-2016,Albania,76,5,5
-2016,Brazil,14,63,63
-2016,Bolivia (Plurinational State of),96,66,66
-2016,Saudi Arabia,44,30,30
-2016,Uzbekistan,74,92,92
-2016,Kyrgyzstan,57,24,24
-2016,Azerbaijan,59,5,5
-2016,Fiji,38,83,83
-2016,South Africa,68,4,4
-2016,Guyana,51,17,17
-2016,Poland,98,57,57
-2016,Lithuania,2,69,69
-2016,Ukraine,64,61,61
-2016,Estonia,84,65,65
-2016,Israel,20,89,89
-2016,Bulgaria,79,60,60
-2016,Croatia,75,7,7
-2016,Cuba,11,0,0
-2016,Romania,18,43,43
-2016,United States of America,27,10,10
-2016,Belarus,19,29,29
-2016,Georgia,73,1,1
-2016,Slovenia,28,96,96
-2016,Iceland,28,33,33
-2016,Montenegro,43,44,44
-2016,Uruguay,57,58,58
-2016,Republic of Korea,62,42,42
-2016,Samoa,36,43,43
-2016,Saint Lucia,34,17,17
-2016,Norway,96,9,9
-2016,Ireland,55,36,36
-2016,Argentina,89,77,77
-2016,Grenada,60,25,25
-2016,Antigua and Barbuda,73,51,51
-2016,Seychelles,22,87,87
-2016,Colombia,57,11,11
-2016,Japan,68,65,65
-2015,United Republic of Tanzania,7,97,97
-2015,Jamaica,73,31,31
-2015,China,98,96,96
-2015,Australia,28,70,70
-2015,Republic of Moldova,74,0,0
-2015,Bosnia and Herzegovina,27,51,51
-2015,Lebanon,61,87,87
-2015,Cyprus,98,17,17
-2015,Austria,15,12,12
-2015,Russian Federation,40,14,14
-2015,Czechia,97,46,46
-2015,Luxembourg,96,5,5
-2015,Spain,84,13,13
-2015,Netherlands,64,63,63
-2015,Bahamas,60,66,66
-2015,Latvia,15,76,76
-2015,Germany,49,39,39
-2015,Barbados,43,60,60
-2015,Switzerland,69,98,98
-2015,Kiribati,89,33,33
-2014,Honduras,64,27,27
-2013,Belgium,99,69,69
+year,country,ptsd_count,depression_count,insanity_count
+2017,Ethiopia,7,13,84
+2017,Sri Lanka,63,16,32
+2017,Iraq,33,40,54
+2017,Somalia,21,80,84
+2017,Tunisia,30,82,66
+2017,Burundi,57,81,27
+2017,Sierra Leone,59,5,42
+2017,Nicaragua,80,2,13
+2017,Iran (Islamic Republic of),86,38,75
+2017,Canada,55,69,22
+2017,Trinidad and Tobago,12,7,74
+2017,Eswatini,80,79,25
+2017,Mauritius,23,18,42
+2017,Serbia,63,26,17
+2017,Equatorial Guinea,58,19,41
+2017,Botswana,8,63,89
+2017,The former Yugoslav Republic of Macedonia,54,81,15
+2017,Bahrain,9,83,7
+2017,Saint Vincent and the Grenadines,92,46,81
+2016,Tonga,58,78,34
+2016,Bangladesh,27,15,64
+2016,Philippines,87,2,51
+2016,Kenya,78,96,84
+2016,Uganda,9,38,64
+2016,Afghanistan,73,29,71
+2016,Myanmar,88,39,76
+2016,Guatemala,99,32,85
+2016,Pakistan,95,77,50
+2016,Mozambique,84,89,8
+2016,Senegal,69,38,17
+2016,Côte d’Ivoire,26,63,65
+2016,India,95,73,84
+2016,Peru,77,2,62
+2016,Angola,31,52,4
+2016,Ghana,34,81,92
+2016,United Arab Emirates,85,2,57
+2016,Turkey,10,68,50
+2016,Malaysia,18,96,2
+2016,Togo,81,84,83
+2016,Syrian Arab Republic,1,74,90
+2016,Rwanda,83,24,12
+2016,Singapore,39,99,53
+2016,Egypt,66,25,68
+2016,Haiti,44,76,68
+2016,Indonesia,53,96,25
+2016,Eritrea,68,84,45
+2016,Madagascar,27,16,68
+2016,Nepal,28,80,71
+2016,Liberia,73,74,29
+2016,Chile,93,68,26
+2016,Ecuador,76,86,61
+2016,Panama,61,75,68
+2016,Zimbabwe,5,27,30
+2016,Greece,71,43,55
+2016,Thailand,68,43,79
+2016,Mexico,11,23,5
+2016,Portugal,2,47,92
+2016,Paraguay,60,54,16
+2016,El Salvador,18,69,30
+2016,Libya,58,93,49
+2016,Morocco,97,22,56
+2016,Yemen,31,34,47
+2016,Mongolia,42,5,68
+2016,Tajikistan,7,35,1
+2016,Qatar,14,48,96
+2016,Costa Rica,0,41,42
+2016,Viet Nam,78,94,94
+2016,Algeria,11,82,3
+2016,Gabon,20,21,5
+2016,Jordan,53,32,15
+2016,Guinea-Bissau,59,3,85
+2016,Zambia,35,28,66
+2016,Albania,65,91,77
+2016,Brazil,63,90,22
+2016,Bolivia (Plurinational State of),87,90,7
+2016,Saudi Arabia,36,52,50
+2016,Uzbekistan,38,37,88
+2016,Kyrgyzstan,31,86,20
+2016,Azerbaijan,31,8,47
+2016,Fiji,67,22,98
+2016,South Africa,77,44,16
+2016,Guyana,75,15,59
+2016,Poland,79,19,1
+2016,Lithuania,15,13,3
+2016,Ukraine,51,47,44
+2016,Estonia,28,53,75
+2016,Israel,45,10,76
+2016,Bulgaria,61,37,17
+2016,Croatia,57,93,17
+2016,Cuba,79,89,84
+2016,Romania,11,25,85
+2016,United States of America,68,91,7
+2016,Belarus,26,14,28
+2016,Georgia,45,53,85
+2016,Slovenia,27,97,33
+2016,Iceland,5,25,12
+2016,Montenegro,81,74,54
+2016,Uruguay,39,14,56
+2016,Republic of Korea,95,86,34
+2016,Samoa,66,28,13
+2016,Saint Lucia,30,18,25
+2016,Norway,57,87,10
+2016,Ireland,72,73,64
+2016,Argentina,61,81,40
+2016,Grenada,76,39,38
+2016,Antigua and Barbuda,85,43,10
+2016,Seychelles,71,35,22
+2016,Colombia,24,85,9
+2016,Japan,46,55,73
+2015,United Republic of Tanzania,94,43,97
+2015,Jamaica,7,58,82
+2015,China,26,6,94
+2015,Australia,81,62,7
+2015,Republic of Moldova,73,48,81
+2015,Bosnia and Herzegovina,61,2,86
+2015,Lebanon,68,15,8
+2015,Cyprus,86,63,6
+2015,Austria,92,43,99
+2015,Russian Federation,17,6,37
+2015,Czechia,2,64,7
+2015,Luxembourg,81,19,44
+2015,Spain,68,13,67
+2015,Netherlands,49,93,17
+2015,Bahamas,98,91,33
+2015,Latvia,98,88,75
+2015,Germany,64,94,46
+2015,Barbados,12,98,24
+2015,Switzerland,5,99,92
+2015,Kiribati,75,47,32
+2014,Honduras,82,89,37
+2013,Belgium,98,55,29

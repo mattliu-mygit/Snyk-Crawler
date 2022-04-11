@@ -47,7 +47,7 @@ toJSON()
                     { id: "Location", title: "country" },
                     { id: "ptsd_count", title: "ptsd_count" },
                     { id: "depression_count", title: "depression_count" },
-                    { id: "depression_count", title: "depression_count" },
+                    { id: "insanity_count", title: "insanity_count" },
                   ],
                 });
                 csvWriterMH
