@@ -1,11 +1,42 @@
 type,year,country,avg_stay,cost,unit_count
-outpatient facility,2016,Guatemala,257,34,1.43
+day treatment facility,2015,Germany,0,6,0.13
+mental health unit,2015,Germany,171,35,0.49
+mental hospital,2015,Germany,147,33,0.34
+outpatient facility,2015,Germany,0,48,0.077
+day treatment facility,2016,Guatemala,0,5,0.018
+mental health unit,2016,Guatemala,337,17,0.006
 mental hospital,2016,Guatemala,58,0,0.006
-outpatient facility,2016,Guatemala,257,34,1.43
-mental hospital,2016,United States of America,104,4,0.19
-outpatient facility,2016,United States of America,102,15,0.37
+outpatient facility,2016,Guatemala,0,34,1.43
+day treatment facility,2016,Chad,0,31,0.003
+mental health unit,2016,Chad,103,32,0.007
+mental hospital,2016,Chad,147,33,0.009
+outpatient facility,2016,Chad,0,15,0.007
+day treatment facility,2016,Seychelles,0,14,1.07
+mental health unit,2016,Seychelles,59,33,1.23
+mental hospital,2016,Seychelles,40,48,1.07
+outpatient facility,2016,Seychelles,0,23,2.13
+day treatment facility,2016,United States of America,0,7,0.24
 mental health unit,2016,United States of America,96,19,0.35
-mental hospital,2016,Republic of Korea,261,38,0.
-outpatient facility,2016,Republic of Korea,44,29,1.79
+mental hospital,2016,United States of America,104,4,0.19
+outpatient facility,2016,United States of America,0,15,0.37
+day treatment facility,2016,Mexico,0,25,0.079
+mental health unit,2016,Mexico,24,35,0.006
+mental hospital,2016,Mexico,24,34,0.029
+outpatient facility,2016,Mexico,0,5,0.13
+day treatment facility,2016,Republic of Korea,0,42,0.13
 mental health unit,2016,Republic of Korea,38,9,0.39
-day treatment facility,2016,Republic of Korea,6,42,0.13
+mental hospital,2016,Republic of Korea,261,38,0.36
+outpatient facility,2016,Republic of Korea,44,29,1.79
+day treatment facility,2015,Australia,0,45,1.11
+mental health unit,2015,Australia,77,9,0.6
+mental hospital,2015,Australia,212,17,0.071
+outpatient facility,2015,Australia,0,6,0.11
+day treatment facility,2016,Croatia,0,17,0.8
+mental health unit,2016,Croatia,133,20,0.52
+mental hospital,2016,Croatia,259,2,0.17
+outpatient facility,2016,Croatia,0,33,3.09
+day treatment facility,2015,Lebanon,0,37,0.085
+mental health unit,2015,Lebanon,325,49,0.14
+mental hospital,2015,Lebanon,90,46,0.085
+outpatient facility,2015,Lebanon,0,14,0.72
+
