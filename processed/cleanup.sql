@@ -1,10 +1,8 @@
-SET FOREIGN_KEY_CHECKS = 0;
-DROP TABLE Country;
-DROP TABLE Suicide_Rates;
 DROP TABLE Mental_Hospital;
-DROP TABLE Facility;
 DROP TABLE Outpatient;
 DROP TABLE General_Hospital;
 DROP TABLE Day_Treatment;
 DROP TABLE Patient_Ledger;
-SET FOREIGN_KEY_CHECKS = 1;
+DROP TABLE Facility;
+DROP TABLE Suicide_Rates;
+DROP TABLE Country;
