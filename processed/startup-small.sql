@@ -79,4 +79,4 @@ LOAD DATA LOCAL INFILE './mh-small.csv' INTO TABLE Mental_Hospital FIELDS TERMIN
 LOAD DATA LOCAL INFILE './mhu-small.csv' INTO TABLE General_Hospital FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './outpatient-small.csv' INTO TABLE Outpatient FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './day_treatment-small.csv' INTO TABLE Day_Treatment FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE './patientledger-small.csv' INTO TABLE Patient_Ledger FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './patient_ledger-small.csv' INTO TABLE Patient_Ledger FIELDS TERMINATED BY ',';
