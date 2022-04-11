@@ -19,7 +19,7 @@ CREATE TABLE Facility (
   avg_stay int,
   cost int,
   unit_count float,
-  PRIMARY KEY(year, country, type_of),
+  PRIMARY KEY(type_of, year, country,
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Mental_Hospital (
@@ -67,10 +67,10 @@ CREATE TABLE Patient_Ledger (
   cost int,
   diagnoses_count int,
   patient_count int,
-  PRIMARY KEY(year, country, type_of),
+  PRIMARY KEY(type_of, year, country),
   FOREIGN KEY(type_of) REFERENCES Facility(type_of),
-  FOREIGN KEY(country) REFERENCES Facility(country),
-  FOREIGN KEY(year) REFERENCES Facility(year)
+  FOREIGN KEY(year) REFERENCES Facility(year),
+  FOREIGN KEY(country) REFERENCES Facility(country)
 );
 LOAD DATA LOCAL INFILE './country.csv' INTO TABLE Country FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './facility.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';
