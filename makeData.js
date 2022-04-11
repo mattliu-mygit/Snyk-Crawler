@@ -203,7 +203,6 @@ toJSON()
     const csvWriter = createCsvWriter({
       path: "./processed/country.csv",
       header: [
-        { id: "Period", title: "year" },
         { id: "Location", title: "name" },
         { id: "ParentLocation", title: "region" },
         { id: "Value", title: "psychiatrist_count" },
