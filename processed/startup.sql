@@ -8,23 +8,23 @@ DROP TABLE Outpatient;
 DROP TABLE General_Hospital;
 DROP TABLE Day_Treatment;
 CREATE TABLE Country (
-  name varchar(20),
+  name varchar(50),
   region varchar(10),
   psychiatrist_count float,
   PRIMARY KEY(name)
 );
 CREATE TABLE Suicide_Rates (
   year int,
-  country varchar(20),
-  sex varchar(5),
+  country varchar(50),
+  sex varchar(10),
   age_standardized_suicide_rates float,
   PRIMARY KEY(country, year, sex),
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Facility (
-  type varchar(20),
+  type varchar(50),
   year int,
-  country varchar(20),
+  country varchar(50),
   avg_stay int,
   cost int,
   unit_count float,
@@ -33,7 +33,7 @@ CREATE TABLE Facility (
 );
 CREATE TABLE Mental_Hospital (
   year int,
-  country varchar(20),
+  country varchar(50),
   ptsd_count int,
   depression_count int,
   Insanity_count int,
@@ -43,7 +43,7 @@ CREATE TABLE Mental_Hospital (
 );
 CREATE TABLE Outpatient (
   year int,
-  country varchar(20),
+  country varchar(50),
   mental_health_allocation float,
   PRIMARY KEY(year, country),
   FOREIGN KEY(country) REFERENCES Facility(country),
@@ -51,7 +51,7 @@ CREATE TABLE Outpatient (
 );
 CREATE TABLE General_Hospital (
   year int,
-  country varchar(20),
+  country varchar(50),
   rehabilitation_count int,
   mental_health_allocation float,
   mental_health_prescription_count int,
@@ -61,7 +61,7 @@ CREATE TABLE General_Hospital (
 );
 CREATE TABLE Day_Treatment (
   year int,
-  country varchar(20),
+  country varchar(50),
   closing_hour int,
   non_drug_alc_count float,
   frug_alc_count float,
