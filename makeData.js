@@ -111,10 +111,6 @@ toJSON()
                     { id: "Period", title: "year" },
                     { id: "Location", title: "country" },
                     {
-                      id: "closing_hour",
-                      title: "closing_hour",
-                    },
-                    {
                       id: "rehabilitation_count",
                       title: "rehabilitation_count",
                     },
@@ -143,11 +139,14 @@ toJSON()
                     cost: Math.floor(Math.random() * 50),
                     unit_count: dayTreatmentJSON.FactValueNumeric,
                   });
-                  mhuJSON.closing_hour = 16 + Math.floor(Math.random() * 8);
-                  mhuJSON.non_drug_alc_count = (Math.random() * 0.2).toFixed(2);
-                  mhuJSON.drug_alc_count = (
+                  dayTreatmentJSON.closing_hour =
+                    16 + Math.floor(Math.random() * 8);
+                  dayTreatmentJSON.non_drug_alc_count = (
+                    Math.random() * 0.2
+                  ).toFixed(2);
+                  dayTreatmentJSON.drug_alc_count = (
                     Math.random() * 0.3 +
-                    mhuJSON.non_drug_and_alcohol_count
+                    dayTreatmentJSON.non_drug_and_alcohol_count
                   ).toFixed(2);
                 });
 
