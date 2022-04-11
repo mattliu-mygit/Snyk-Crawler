@@ -26,6 +26,7 @@ toJSON()
                  * 3. We are creating a table for the overarching facility type using the final processed yearMap
                  */
                 const yearMap = [];
+                const patient_ledgers = [];
                 mhJSONs.forEach((mhJSON) => {
                   yearMap.push({
                     type: "mental hospital",
@@ -38,6 +39,14 @@ toJSON()
                   mhJSON.ptsd_count = Math.floor(Math.random() * 100);
                   mhJSON.depression_count = Math.floor(Math.random() * 100);
                   mhJSON.insanity_count = Math.floor(Math.random() * 100);
+                  patient_ledgers.push({
+                    year: mhJSON.Period,
+                    country: mhJSON.Location,
+                    type: "mental hospital",
+                    cost: Math.floor(Math.random() * 50),
+                    diagnoses_count: Math.floor(Math.random() * 100),
+                    patient_count: Math.floor(Math.random() * 75),
+                  });
                 });
 
                 const csvWriterMH = createCsvWriter({
@@ -67,6 +76,14 @@ toJSON()
                   });
                   outpatientJSON.mental_health_allocation =
                     Math.random().toFixed(2);
+                  patient_ledgers.push({
+                    year: outpatientJSON.Period,
+                    country: outpatientJSON.Location,
+                    type: "outpatient facility",
+                    cost: Math.floor(Math.random() * 50),
+                    diagnoses_count: Math.floor(Math.random() * 100),
+                    patient_count: Math.floor(Math.random() * 75),
+                  });
                 });
                 const csvWriterOutpatient = createCsvWriter({
                   path: "./processed/outpatient.csv",
@@ -103,6 +120,14 @@ toJSON()
                   mhuJSON.mental_health_prescription_count = Math.floor(
                     Math.random() * 10
                   );
+                  patient_ledgers.push({
+                    type: "mental health unit",
+                    year: mhuJSON.Period,
+                    country: mhuJSON.Location,
+                    cost: Math.floor(Math.random() * 50),
+                    diagnoses_count: Math.floor(Math.random() * 100),
+                    patient_count: Math.floor(Math.random() * 75),
+                  });
                 });
 
                 const csvWriterMHU = createCsvWriter({
@@ -148,6 +173,14 @@ toJSON()
                     Math.random() * 0.3 +
                     parseFloat(dayTreatmentJSON.non_drug_alc_count);
                   dayTreatmentJSON.drug_alc_count = drugAlcCount.toFixed(2);
+                  patient_ledgers.push({
+                    type: "day treatment facility",
+                    year: dayTreatmentJSON.Period,
+                    country: dayTreatmentJSON.Location,
+                    cost: Math.floor(Math.random() * 50),
+                    diagnoses_count: Math.floor(Math.random() * 100),
+                    patient_count: Math.floor(Math.random() * 75),
+                  });
                 });
 
                 const csvWriterDay = createCsvWriter({
@@ -188,6 +221,22 @@ toJSON()
                 });
                 csvWriterFacility
                   .writeRecords(yearMap)
+                  .then(() =>
+                    console.log("The CSV file was written successfully")
+                  );
+                const csvWriterPatientLedger = createCsvWriter({
+                  path: "./processed/patientledger.csv",
+                  header: [
+                    { id: "type", title: "type" },
+                    { id: "year", title: "year" },
+                    { id: "country", title: "country" },
+                    { id: "cost", title: "cost" },
+                    { id: "diagnoses_count", title: "diagnoses_count" },
+                    { id: "patient_count", title: "patient_count" },
+                  ],
+                });
+                csvWriterPatientLedger
+                  .writeRecords(patient_ledgers)
                   .then(() =>
                     console.log("The CSV file was written successfully")
                   );
