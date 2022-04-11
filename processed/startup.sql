@@ -4,7 +4,6 @@ DROP TABLE Country;
 DROP TABLE Suicide_Rates;
 DROP TABLE Mental_Hospital;
 DROP TABLE Facility;
-DROP TABLE Country;
 DROP TABLE Outpatient;
 DROP TABLE General_Hospital;
 DROP TABLE Day_Treatment;
@@ -15,17 +14,17 @@ CREATE TABLE Country (
   PRIMARY KEY(name)
 );
 CREATE TABLE Suicide_Rates (
-  country varchar(20),
   year int,
+  country varchar(20),
   sex varchar(5),
   age_standardized_suicide_rates float,
   PRIMARY KEY(country, year, sex),
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Facility (
+  type varchar(20),
   year int,
   country varchar(20),
-  type varchar(20),
   avg_stay int,
   cost int,
   unit_count float,
