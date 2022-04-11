@@ -1,3 +1,5 @@
+SET FOREIGN_KEY_CHECKS = 0;
+-- to disable them
 DROP TABLE Country;
 DROP TABLE Suicide_Rates;
 DROP TABLE Mental_Hospital;
@@ -68,6 +70,8 @@ CREATE TABLE Day_Treatment (
   FOREIGN KEY(country) REFERENCES Facility(country),
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
+SET FOREIGN_KEY_CHECKS = 1;
+-- to re-enable them
 LOAD DATA LOCAL INFILE './country.csv' INTO TABLE Country FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './suicide.csv' INTO TABLE Suicide_Rates FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './facility.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';
