@@ -64,7 +64,7 @@ CREATE TABLE Day_Treatment (
   country varchar(50),
   closing_hour int,
   non_drug_alc_count float,
-  frug_alc_count float,
+  drug_alc_count float,
   PRIMARY KEY(year, country),
   FOREIGN KEY(country) REFERENCES Facility(country),
   FOREIGN KEY(year) REFERENCES Facility(year)
