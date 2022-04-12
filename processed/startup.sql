@@ -67,10 +67,9 @@ CREATE TABLE Patient_Ledger (
   cost int,
   diagnoses_count int,
   patient_count int,
-  PRIMARY KEY(type_of, year, country),
-  FOREIGN KEY(type_of) REFERENCES Facility(type_of),
-  FOREIGN KEY(year) REFERENCES Facility(year),
-  FOREIGN KEY(country) REFERENCES Facility(country)
+  PRIMARY KEY(year, country, type),
+  FOREIGN KEY(country) REFERENCES Facility(country),
+  FOREIGN KEY(year) REFERENCES Facility(year)
 );
 LOAD DATA LOCAL INFILE './country.csv' INTO TABLE Country FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './facility.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';

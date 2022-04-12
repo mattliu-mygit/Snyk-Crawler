@@ -19,12 +19,6 @@ toJSON()
             toJSON()
               .fromFile(day_treatment)
               .then((dayTreatmentJSONs) => {
-                /**
-                 * What are we doing here?
-                 * 1. We are storing all facilities in a Facilities parent table in an array yearMap
-                 * 2. We are creating individual tables for each facility type
-                 * 3. We are creating a table for the overarching facility type using the final processed yearMap
-                 */
                 const yearMap = [];
                 const patient_ledgers = [];
                 mhJSONs.forEach((mhJSON) => {
