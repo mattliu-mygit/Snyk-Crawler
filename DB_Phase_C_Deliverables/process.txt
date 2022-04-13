@@ -1,0 +1,30 @@
+Producing table data:
+In order to produce the data used in our tables, we ran a script to process and add additional data to the database from csv files downloaded from the links below.
+It can be found here: https://github.com/room-projector/Snyk-Crawler
+Follow the instructions in the README.md file to run the script and reproduce our data.
+For much of the data we needed to remove all columns in the csv files that were not needed for our tables determined from our ER diagram.
+
+The columns we kept for each of the csv files is listed as below:
+Sucide: Period, Location, Dim1, FactValueNumeric renamed to be year, country, sex, and age_standardized_suicide_rates respectively.
+Psychiatrists count (renamed to Country): Location, ParentLocation, Value renamed to be name, region, and psychiatrist_count respectively.
+Outpatient: Location, Period renamed to be country and year respectively. An additional column mental_health_allocation was added to the csv file to increase table complexity.
+General Hospital: Location, Period renamed to be country and year respectively. Additional columns rehabilitation_count, mental_health_allocation, and mental_health_prescription_count were added to the csv file to increase table complexity.
+Day Treatment: Location, Period renamed to be country and year respectively. Additional columns closing_hour, non_drug_alc_count, and drug_alc_count were added to the csv file to increase table complexity.
+Mental Hospital: Location, Period renamed to be country and year respectively. Additional columns ptsd_count,depression_count, and insanity_count were added to the csv file to increase table complexity.
+While processing each of the types of facilities (Outpatient, General Hospital, Day Treatment, and Mental Hospital), we created a facility and patient ledger parent tuple for each of the facilities.
+Facility: was created with columns the Location, FactValueNumeric, and Period attributes of each Facility type tuple. An additional type attribute was added to the Facility tuple to indicate the type of facility. Finally, avg_stay and cost columns were added to increase table complexity.
+Patient Ledger: was created with Location and Period attributes of each Facility tuple. An additional type attribute was added to the Patient Ledger tuple to indicate the type of facility. Finally, cost, diagnoses_count, and patient_count columns were added to increase table complexity.
+
+Running startup script:
+Connect to a ugrad machine.
+Clone the repo mentioned above and cd into the processed folder. 
+Connect to your MariaDB database.
+From there, run "\. startup.sql" to run the startup script, "\. startup-small.sql" to run the small startup script, and "\. cleanup.sql" to run the cleanup script.
+
+The links we used to download much of the initial csv data are found below:
+Suicide: https://www.who.int/data/gho/data/themes/mental-health/suicide-rates 
+Psychiatrist count: https://www.who.int/data/gho/data/indicators/indicator-details/GHO/psychiatrists-working-in-mental-health-sector-(per-100-000)
+Outpatient: https://www.who.int/data/gho/data/indicators/indicator-details/GHO/mental-health-outpatient-facilities-(per-100-000)
+General Hospital: https://www.who.int/data/gho/data/indicators/indicator-details/GHO/mental-health-units-in-general-hospitals-(per-100-000)
+Day Treatment: https://www.who.int/data/gho/data/indicators/indicator-details/GHO/mental-health-day-treatment-facilities-(per-100-000) 
+Mental Hospital: https://www.who.int/data/gho/data/indicators/indicator-details/GHO/mental-hospitals-(per-100-000) 
