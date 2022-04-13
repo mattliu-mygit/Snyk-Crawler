@@ -1,3 +1,5 @@
+-- Matthew Liu, mliu78
+-- Karen He, khe8
 CREATE TABLE Country (
   name varchar(50),
   region varchar(10),
