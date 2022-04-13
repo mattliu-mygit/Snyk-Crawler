@@ -1,3 +1,5 @@
+-- Matthew Liu, mliu78
+-- Karen He, khe8
 DROP TABLE IF EXISTS Mental_Hospital;
 DROP TABLE IF EXISTS Outpatient;
 DROP TABLE IF EXISTS General_Hospital;

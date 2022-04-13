@@ -1,3 +1,6 @@
+Matthew Liu, mliu78
+Karen He, khe8
+
 Producing table data:
 In order to produce the data used in our tables, we ran a script to process and add additional data to the database from csv files downloaded from the links below.
 It can be found here: https://github.com/room-projector/Snyk-Crawler

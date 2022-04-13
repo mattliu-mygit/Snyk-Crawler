@@ -67,8 +67,9 @@ CREATE TABLE Patient_Ledger (
   cost int,
   diagnoses_count int,
   patient_count int,
-  PRIMARY KEY(type_of, year, country),
-  FOREIGN KEY(type_of) REFERENCES Facility(type_of)
+  PRIMARY KEY(year, country, type_of),
+  FOREIGN KEY(country) REFERENCES Facility(country),
+  FOREIGN KEY(year) REFERENCES Facility(year)
 );
 --FOREIGN KEY(country) REFERENCES Facility(country),
 --FOREIGN KEY(year) REFERENCES Facility(year)
