@@ -29,8 +29,7 @@ CREATE TABLE Mental_Hospital (
   depression_count int,
   Insanity_count int,
   PRIMARY KEY(year, country),
-  FOREIGN KEY(year) REFERENCES Facility(year),
-  FOREIGN KEY(country) REFERENCES Facility(country)
+  FOREIGN KEY(year, country) REFERENCES Facility(year, country)
 );
 CREATE TABLE Outpatient (
   year int,
