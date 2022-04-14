@@ -1,4 +1,3 @@
-type,year,country,avg_stay,cost,unit_count
 day treatment facility,2015,Germany,0,6,0.13
 mental health unit,2015,Germany,171,35,0.49
 mental hospital,2015,Germany,147,33,0.34

@@ -1,6 +1,6 @@
 CREATE TABLE Country (
   name varchar(50),
-  region varchar(10),
+  region varchar(50),
   psychiatrist_count float,
   PRIMARY KEY(name)
 );
@@ -70,12 +70,11 @@ CREATE TABLE Patient_Ledger (
   FOREIGN KEY(country) REFERENCES Facility(country),
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
-
 LOAD DATA LOCAL INFILE './country-small.csv' INTO TABLE Country FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE './facility-small.csv' INTO TABLE Facility FIELDS TERMINATED BY ','  LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE './suicide-small.csv' INTO TABLE Suicide_Rates FIELDS TERMINATED BY ','  LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE './mh-small.csv' INTO TABLE Mental_Hospital FIELDS TERMINATED BY ','  LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE './mhu-small.csv' INTO TABLE General_Hospital FIELDS TERMINATED BY ','  LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE './outpatient-small.csv' INTO TABLE Outpatient FIELDS TERMINATED BY ','  LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE './day_treatment-small.csv' INTO TABLE Day_Treatment FIELDS TERMINATED BY ','  LINES TERMINATED BY '\n';
-LOAD DATA LOCAL INFILE './patient_ledger-small.csv' INTO TABLE Patient_Ledger FIELDS TERMINATED BY ','  LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './suicide-small.csv' INTO TABLE Suicide_Rates FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './facility-small.csv' INTO TABLE Facility FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './mh-small.csv' INTO TABLE Mental_Hospital FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './mhu-small.csv' INTO TABLE General_Hospital FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './outpatient-small.csv' INTO TABLE Outpatient FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './day_treatment-small.csv' INTO TABLE Day_Treatment FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './patient_ledger-small.csv' INTO TABLE Patient_Ledger FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';

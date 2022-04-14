@@ -1,4 +1,3 @@
-type,year,country,cost,diagnoses_count,patient_count
 mental hospital,2017,Ethiopia,36,28,14
 mental hospital,2017,Sri Lanka,11,84,0
 mental hospital,2017,Iraq,43,24,64

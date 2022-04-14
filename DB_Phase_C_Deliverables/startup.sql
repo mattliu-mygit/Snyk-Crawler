@@ -1,8 +1,6 @@
--- Matthew Liu, mliu78
--- Karen He, khe8
 CREATE TABLE Country (
   name varchar(50),
-  region varchar(10),
+  region varchar(50),
   psychiatrist_count float,
   PRIMARY KEY(name)
 );
@@ -15,13 +13,13 @@ CREATE TABLE Suicide_Rates (
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Facility (
-  type_of varchar(50),
+  facility_type varchar(50),
   year int,
   country varchar(50),
   avg_stay int,
   cost int,
   unit_count float,
-  PRIMARY KEY(year, country, type_of),
+  PRIMARY KEY(year, country, facility_type),
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Mental_Hospital (
@@ -63,19 +61,19 @@ CREATE TABLE Day_Treatment (
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
 CREATE TABLE Patient_Ledger (
-  type_of varchar(50),
+  facility_type varchar(50),
   year int,
   country varchar(50),
   cost int,
   diagnoses_count int,
   patient_count int,
-  PRIMARY KEY(year, country, type_of),
+  PRIMARY KEY(year, country, facility_type),
   FOREIGN KEY(country) REFERENCES Facility(country),
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
 LOAD DATA LOCAL INFILE './country.csv' INTO TABLE Country FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE './facility.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './suicide.csv' INTO TABLE Suicide_Rates FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './facility.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './mh.csv' INTO TABLE Mental_Hospital FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './mhu.csv' INTO TABLE General_Hospital FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE './outpatient.csv' INTO TABLE Outpatient FIELDS TERMINATED BY ',';

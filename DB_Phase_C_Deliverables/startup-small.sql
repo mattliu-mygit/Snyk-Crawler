@@ -1,8 +1,6 @@
--- Matthew Liu, mliu78
--- Karen He, khe8
 CREATE TABLE Country (
   name varchar(50),
-  region varchar(10),
+  region varchar(50),
   psychiatrist_count float,
   PRIMARY KEY(name)
 );
@@ -11,7 +9,7 @@ CREATE TABLE Suicide_Rates (
   country varchar(50),
   sex varchar(10),
   age_standardized_suicide_rates float,
-  PRIMARY KEY(country, year, sex),
+  PRIMARY KEY(year, country, sex),
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Facility (
@@ -21,7 +19,7 @@ CREATE TABLE Facility (
   avg_stay int,
   cost int,
   unit_count float,
-  PRIMARY KEY(year, country, type_of),
+  PRIMARY KEY(type_of, year, country),
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Mental_Hospital (
@@ -31,8 +29,7 @@ CREATE TABLE Mental_Hospital (
   depression_count int,
   Insanity_count int,
   PRIMARY KEY(year, country),
-  FOREIGN KEY(country) REFERENCES Facility(country),
-  FOREIGN KEY(year) REFERENCES Facility(year)
+  FOREIGN KEY(year, country) REFERENCES Facility(year, country)
 );
 CREATE TABLE Outpatient (
   year int,
@@ -73,11 +70,11 @@ CREATE TABLE Patient_Ledger (
   FOREIGN KEY(country) REFERENCES Facility(country),
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
-LOAD DATA LOCAL INFILE './country-small.csv' INTO TABLE Country FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE './facility-small.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE './suicide-small.csv' INTO TABLE Suicide_Rates FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE './mh-small.csv' INTO TABLE Mental_Hospital FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE './mhu-small.csv' INTO TABLE General_Hospital FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE './outpatient-small.csv' INTO TABLE Outpatient FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE './day_treatment-small.csv' INTO TABLE Day_Treatment FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE './patient_ledger-small.csv' INTO TABLE Patient_Ledger FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './country-small.csv' INTO TABLE Country FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './suicide-small.csv' INTO TABLE Suicide_Rates FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './facility-small.csv' INTO TABLE Facility FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './mh-small.csv' INTO TABLE Mental_Hospital FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './mhu-small.csv' INTO TABLE General_Hospital FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './outpatient-small.csv' INTO TABLE Outpatient FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './day_treatment-small.csv' INTO TABLE Day_Treatment FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './patient_ledger-small.csv' INTO TABLE Patient_Ledger FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
