@@ -9,7 +9,7 @@ CREATE TABLE Suicide_Rates (
   country varchar(50),
   sex varchar(10),
   age_standardized_suicide_rates float,
-  PRIMARY KEY(country, year, sex),
+  PRIMARY KEY(year, country, sex),
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Facility (
@@ -29,8 +29,8 @@ CREATE TABLE Mental_Hospital (
   depression_count int,
   Insanity_count int,
   PRIMARY KEY(year, country),
-  FOREIGN KEY(country) REFERENCES Facility(country),
-  FOREIGN KEY(year) REFERENCES Facility(year)
+  FOREIGN KEY(year) REFERENCES Facility(year),
+  FOREIGN KEY(country) REFERENCES Facility(country)
 );
 CREATE TABLE Outpatient (
   year int,
