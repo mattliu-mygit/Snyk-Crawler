@@ -13,13 +13,13 @@ CREATE TABLE Suicide_Rates (
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Facility (
-  type_of varchar(50),
+  facility_type varchar(50),
   year int,
   country varchar(50),
   avg_stay int,
   cost int,
   unit_count float,
-  PRIMARY KEY(year, country, type_of),
+  PRIMARY KEY(year, country, facility_type),
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Mental_Hospital (
@@ -61,14 +61,14 @@ CREATE TABLE Day_Treatment (
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
 CREATE TABLE Patient_Ledger (
-  type_of varchar(50),
+  facility_type varchar(50),
   year int,
   country varchar(50),
   cost int,
   diagnoses_count int,
   patient_count int,
   PRIMARY KEY(year, country, type_of),
-  FOREIGN KEY(type_of) REFERENCES Facility(type_of),
+  FOREIGN KEY(facility_type) REFERENCES Facility(facility_type),
   FOREIGN KEY(country) REFERENCES Facility(country),
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
