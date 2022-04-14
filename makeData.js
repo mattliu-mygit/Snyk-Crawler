@@ -8,11 +8,10 @@ const suicide_rates = "./db-dat/suicide_rates.csv";
 const day_treatment = "./db-dat/day_treatment.csv";
 
 const checkCountry = (countries, country) => {
-  // console.log(countries, country);
   for (let c of countries) {
-    if (c.Location === country) return true;
+    if (c.Location === country) return false;
   }
-  return false;
+  return true;
 };
 
 toJSON()
