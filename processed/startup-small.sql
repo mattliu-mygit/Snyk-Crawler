@@ -9,17 +9,17 @@ CREATE TABLE Suicide_Rates (
   country varchar(50),
   sex varchar(10),
   age_standardized_suicide_rates float,
-  PRIMARY KEY(year, country, sex),
+  PRIMARY KEY(country, year, sex),
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Facility (
-  type_of varchar(50),
+  facility_type varchar(50),
   year int,
   country varchar(50),
   avg_stay int,
   cost int,
   unit_count float,
-  PRIMARY KEY(type_of, year, country),
+  PRIMARY KEY(year, country, facility_type),
   FOREIGN KEY(country) REFERENCES Country(name)
 );
 CREATE TABLE Mental_Hospital (
@@ -29,7 +29,8 @@ CREATE TABLE Mental_Hospital (
   depression_count int,
   Insanity_count int,
   PRIMARY KEY(year, country),
-  FOREIGN KEY(year, country) REFERENCES Facility(year, country)
+  FOREIGN KEY(country) REFERENCES Facility(country),
+  FOREIGN KEY(year) REFERENCES Facility(year)
 );
 CREATE TABLE Outpatient (
   year int,
@@ -60,13 +61,13 @@ CREATE TABLE Day_Treatment (
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
 CREATE TABLE Patient_Ledger (
-  type_of varchar(50),
+  facility_type varchar(50),
   year int,
   country varchar(50),
   cost int,
   diagnoses_count int,
   patient_count int,
-  PRIMARY KEY(year, country, type_of),
+  PRIMARY KEY(year, country, facility_type),
   FOREIGN KEY(country) REFERENCES Facility(country),
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
