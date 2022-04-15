@@ -1,12 +1,12 @@
 CREATE TABLE Country (
-  name varchar(50),
+  name varchar(70),
   region varchar(50),
   psychiatrist_count float,
   PRIMARY KEY(name)
 );
 CREATE TABLE Suicide_Rates (
   year int,
-  country varchar(50),
+  country varchar(70),
   sex varchar(10),
   age_standardized_suicide_rates float,
   PRIMARY KEY(country, year, sex),
@@ -15,7 +15,7 @@ CREATE TABLE Suicide_Rates (
 CREATE TABLE Facility (
   facility_type varchar(50),
   year int,
-  country varchar(50),
+  country varchar(70),
   avg_stay int,
   cost int,
   unit_count float,
@@ -24,7 +24,7 @@ CREATE TABLE Facility (
 );
 CREATE TABLE Mental_Hospital (
   year int,
-  country varchar(50),
+  country varchar(70),
   ptsd_count int,
   depression_count int,
   Insanity_count int,
@@ -34,7 +34,7 @@ CREATE TABLE Mental_Hospital (
 );
 CREATE TABLE Outpatient (
   year int,
-  country varchar(50),
+  country varchar(70),
   mental_health_allocation float,
   PRIMARY KEY(year, country),
   FOREIGN KEY(country) REFERENCES Facility(country),
@@ -42,7 +42,7 @@ CREATE TABLE Outpatient (
 );
 CREATE TABLE General_Hospital (
   year int,
-  country varchar(50),
+  country varchar(70),
   rehabilitation_count int,
   mental_health_allocation float,
   mental_health_prescription_count int,
@@ -52,7 +52,7 @@ CREATE TABLE General_Hospital (
 );
 CREATE TABLE Day_Treatment (
   year int,
-  country varchar(50),
+  country varchar(70),
   closing_hour int,
   non_drug_alc_count float,
   drug_alc_count float,
@@ -63,7 +63,7 @@ CREATE TABLE Day_Treatment (
 CREATE TABLE Patient_Ledger (
   facility_type varchar(50),
   year int,
-  country varchar(50),
+  country varchar(70),
   cost int,
   diagnoses_count int,
   patient_count int,
