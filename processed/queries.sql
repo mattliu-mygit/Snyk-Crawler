@@ -33,3 +33,15 @@ FROM psychCount)
 SELECT name
 FROM psychCount, greatestPsych
 WHERE psych_count = greatest_psych;
+
+--16. In 2019, how many males vs females committed suicide for each country?
+WITH maleSuicide AS (
+SELECT Country.name AS country, Country.population / 100000 * Suicide_Rates.age_standardized_suicide_rates AS number_of_male_suicides
+FROM Suicide_Rates JOIN Country ON Suicide_Rates.country = Country.name
+WHERE Suicide_Rates.year = "2019" AND Suicide_Rates.sex = "male"),
+femaleSuicide AS (
+SELECT Country.name AS country, Country.population / 100000 * Suicide_Rates.age_standardized_suicide_rates AS number_of_female_suicides
+FROM Suicide_Rates JOIN Country ON Suicide_Rates.country = Country.name
+WHERE Suicide_Rates.year = "2019" AND Suicide_Rates.sex = "female")
+SELECT maleSuicide.country, number_of_male_suicides, number_of_female_suicides
+FROM maleSuicide JOIN femaleSuicide ON maleSuicide.country = femaleSuicide.country;
