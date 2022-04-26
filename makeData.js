@@ -41,12 +41,10 @@ toJSON()
                             let countries = [...psychiatristsJSONs];
 
                             const totalObjs = [];
-                            populationJSONs.forEach((pop, i) => {
+                            populationJSONs.forEach((pop) => {
                               let count = 0;
-                              // const columnCount = 66;
                               let tot = 0;
                               for (let prop in pop) {
-                                // console.log(count);
                                 if (count < 61) {
                                   tot += Number(pop[prop]);
                                 } else if (count === 61) {
@@ -58,20 +56,24 @@ toJSON()
                                 count++;
                               }
                             });
-                            // console.log(totalObjs);
                             countries = countries.map((c) => {
                               for (let t of totalObjs) {
                                 if (t.country === c.Location) {
                                   return {
                                     ...c,
-                                    population: parseInt(t.average_population),
+                                    population: Math.floor(
+                                      t.average_population
+                                    ),
                                   };
                                 }
                               }
-                              return {
+                              const newC = {
                                 ...c,
-                                population: parseInt(Math.random() * 10000000),
+                                population: Math.floor(
+                                  Math.random() * 1000000000
+                                ),
                               };
+                              return newC;
                             });
 
                             const csvWriterCountry = createCsvWriter({
@@ -93,6 +95,9 @@ toJSON()
                                   Location: mhJSON.Location,
                                   ParentLocation: mhJSON.ParentLocation,
                                   Value: (Math.random() * 5).toFixed(2),
+                                  population: Math.floor(
+                                    Math.random() * 10000000
+                                  ),
                                 });
                               yearMap.push({
                                 type: "mental hospital",
@@ -166,6 +171,9 @@ toJSON()
                                   Location: outpatientJSON.Location,
                                   ParentLocation: outpatientJSON.ParentLocation,
                                   Value: (Math.random() * 5).toFixed(2),
+                                  population: Math.floor(
+                                    Math.random() * 10000000
+                                  ),
                                 });
                               outpatientJSON.mental_health_allocation =
                                 Math.random().toFixed(2);
@@ -217,6 +225,9 @@ toJSON()
                                   Location: mhuJSON.Location,
                                   ParentLocation: mhuJSON.ParentLocation,
                                   Value: (Math.random() * 5).toFixed(2),
+                                  population: Math.floor(
+                                    Math.random() * 10000000
+                                  ),
                                 });
                               mhuJSON.rehabilitation_count = Math.floor(
                                 Math.random() * 100
@@ -287,6 +298,9 @@ toJSON()
                                   ParentLocation:
                                     dayTreatmentJSON.ParentLocation,
                                   Value: (Math.random() * 5).toFixed(2),
+                                  population: Math.floor(
+                                    Math.random() * 10000000
+                                  ),
                                 });
                               dayTreatmentJSON.closing_hour =
                                 16 + Math.floor(Math.random() * 8);
@@ -382,6 +396,9 @@ toJSON()
                                   ParentLocation:
                                     suicideRatesJSON.ParentLocation,
                                   Value: (Math.random() * 5).toFixed(2),
+                                  population: Math.floor(
+                                    Math.random() * 10000000
+                                  ),
                                 });
                             });
                             const csvWriter = createCsvWriter({
