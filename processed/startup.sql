@@ -4,6 +4,7 @@ CREATE TABLE Country (
   name varchar(70),
   region varchar(50),
   psychiatrist_count float,
+  population int,
   PRIMARY KEY(name)
 );
 CREATE TABLE Suicide_Rates (
