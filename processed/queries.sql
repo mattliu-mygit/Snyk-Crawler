@@ -107,3 +107,15 @@ FROM Facility
 GROUP BY Facility.country,
   Facility.year
 ORDER BY Facility.country;
+-- 5. What is total mental health allocation of each country?
+SELECT General_Hospital.country,
+  General_Hospital.year,
+  General_Hospital.mental_health_allocation + Outpatient.mental_health_allocation AS mental_health_allocation
+FROM Outpatient
+  JOIN General_Hospital ON General_Hospital.country = Outpatient.country;
+-- 7. What region has the highest rates of depression?
+SELECT region,
+  AVG(age_standardized_suicide_rates) AS available_mental_health_units
+FROM Country
+  JOIN Suicide_Rates ON Country.name = Suicide_Rates.country
+GROUP BY region;

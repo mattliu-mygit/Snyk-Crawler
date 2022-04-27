@@ -1,12 +1,6 @@
--- 4. What type of facility do most people go to for each country
-SELECT Facility.country,
-  Facility.year,
-  MAX(Patient_Ledger.patient_count) as count,
-  Facility.facility_type
-FROM Facility
-  JOIN Patient_Ledger on Facility.year = Patient_Ledger.year
-  AND Facility.country = Patient_Ledger.country
-  AND Facility.facility_type = Patient_Ledger.facility_type
-GROUP BY Facility.country,
-  Facility.year
-ORDER BY Facility.country;
+-- 7. What region has the highest rates of depression?
+SELECT region,
+  AVG(age_standardized_suicide_rates) AS available_mental_health_units
+FROM Country
+  JOIN Suicide_Rates ON Country.name = Suicide_Rates.country
+GROUP BY region;
