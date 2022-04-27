@@ -1,131 +1,132 @@
-2017,Ethiopia,0,93,26
-2017,Sri Lanka,75,33,88
-2017,Iraq,94,16,58
-2017,Somalia,18,45,60
-2017,Tunisia,66,69,7
-2017,Burundi,26,44,15
-2017,Sierra Leone,64,94,83
-2017,Nicaragua,9,48,50
-2017,Iran (Islamic Republic of),11,72,37
-2017,Canada,55,48,37
-2017,Trinidad and Tobago,98,40,74
-2017,Eswatini,2,76,68
-2017,Mauritius,46,7,11
-2017,Serbia,66,59,97
-2017,Equatorial Guinea,60,67,11
-2017,Botswana,14,38,66
-2017,The former Yugoslav Republic of Macedonia,59,95,63
-2017,Bahrain,2,42,22
-2017,Saint Vincent and the Grenadines,66,92,0
-2016,Tonga,49,50,11
-2016,Bangladesh,69,3,27
-2016,Philippines,70,17,22
-2016,Kenya,83,78,7
-2016,Uganda,43,63,72
-2016,Afghanistan,9,50,34
-2016,Myanmar,27,61,79
-2016,Guatemala,85,72,38
-2016,Pakistan,15,69,96
-2016,Mozambique,76,51,45
-2016,Senegal,37,88,89
-2016,Côte d’Ivoire,58,95,0
-2016,India,5,2,9
-2016,Peru,7,20,77
-2016,Angola,51,12,90
-2016,Ghana,53,9,30
-2016,United Arab Emirates,63,71,67
-2016,Turkey,72,70,83
-2016,Malaysia,87,96,98
-2016,Togo,3,37,50
-2016,Syrian Arab Republic,52,98,77
-2016,Rwanda,90,47,69
-2016,Singapore,38,76,94
-2016,Egypt,34,67,46
-2016,Haiti,67,5,62
-2016,Indonesia,15,1,81
-2016,Eritrea,16,88,73
-2016,Madagascar,53,77,81
-2016,Nepal,97,97,93
-2016,Liberia,58,8,45
-2016,Chile,80,34,29
-2016,Ecuador,41,49,45
-2016,Panama,62,62,48
-2016,Zimbabwe,23,5,99
-2016,Greece,58,96,81
-2016,Thailand,78,94,4
-2016,Mexico,21,12,36
-2016,Portugal,27,6,52
-2016,Paraguay,58,89,60
-2016,El Salvador,1,62,64
-2016,Libya,70,6,74
-2016,Morocco,75,23,38
-2016,Yemen,71,8,86
-2016,Mongolia,66,91,83
-2016,Tajikistan,37,67,51
-2016,Qatar,8,18,46
-2016,Costa Rica,52,41,6
-2016,Viet Nam,31,20,92
-2016,Algeria,22,82,98
-2016,Gabon,35,59,31
-2016,Jordan,11,90,3
-2016,Guinea-Bissau,29,94,7
-2016,Zambia,27,47,0
-2016,Albania,57,14,2
-2016,Brazil,9,5,32
-2016,Bolivia (Plurinational State of),17,95,42
-2016,Saudi Arabia,36,66,68
-2016,Uzbekistan,44,0,10
-2016,Kyrgyzstan,60,75,30
-2016,Azerbaijan,19,50,4
-2016,Fiji,17,44,76
-2016,South Africa,3,16,81
-2016,Guyana,21,47,27
-2016,Poland,39,50,27
-2016,Lithuania,37,97,17
-2016,Ukraine,85,60,95
-2016,Estonia,27,86,56
-2016,Israel,95,34,18
-2016,Bulgaria,64,59,1
-2016,Croatia,0,0,50
-2016,Cuba,94,26,32
-2016,Romania,80,28,45
-2016,United States of America,81,39,45
-2016,Belarus,37,96,82
-2016,Georgia,4,6,84
-2016,Slovenia,14,14,94
-2016,Iceland,51,89,19
-2016,Montenegro,41,15,66
-2016,Uruguay,34,86,7
-2016,Republic of Korea,47,61,63
-2016,Samoa,39,19,84
-2016,Saint Lucia,14,23,51
-2016,Norway,52,30,3
-2016,Ireland,55,86,9
-2016,Argentina,69,28,20
-2016,Grenada,18,62,94
-2016,Antigua and Barbuda,63,53,70
-2016,Seychelles,43,5,10
-2016,Colombia,45,42,8
-2016,Japan,82,9,45
-2015,United Republic of Tanzania,22,38,28
-2015,Jamaica,2,78,76
-2015,China,99,78,42
-2015,Australia,91,62,91
-2015,Republic of Moldova,0,28,6
-2015,Bosnia and Herzegovina,22,83,66
-2015,Lebanon,0,22,65
-2015,Cyprus,97,80,99
-2015,Austria,68,93,13
-2015,Russian Federation,45,6,58
-2015,Czechia,73,26,96
-2015,Luxembourg,64,72,80
-2015,Spain,2,3,9
-2015,Netherlands,17,54,85
-2015,Bahamas,20,90,26
-2015,Latvia,23,79,69
-2015,Germany,27,53,6
-2015,Barbados,11,61,73
-2015,Switzerland,25,20,42
-2015,Kiribati,81,70,39
-2014,Honduras,68,44,39
-2013,Belgium,27,28,84
+year,country,ptsd_count,depression_count,insanity_count
+2017,Ethiopia,4,13,11
+2017,Sri Lanka,8,1,0
+2017,Iraq,5,6,14
+2017,Somalia,6,10,3
+2017,Tunisia,6,4,9
+2017,Burundi,9,23,6
+2017,Sierra Leone,5,19,0
+2017,Nicaragua,8,21,5
+2017,Iran (Islamic Republic of),8,9,2
+2017,Canada,7,0,5
+2017,Trinidad and Tobago,9,10,12
+2017,Eswatini,8,6,14
+2017,Mauritius,3,10,13
+2017,Serbia,4,12,8
+2017,Equatorial Guinea,3,5,10
+2017,Botswana,5,1,6
+2017,The former Yugoslav Republic of Macedonia,9,19,8
+2017,Bahrain,2,21,13
+2017,Saint Vincent and the Grenadines,9,3,11
+2016,Tonga,7,13,13
+2016,Bangladesh,7,22,9
+2016,Philippines,0,22,0
+2016,Kenya,4,22,0
+2016,Uganda,4,16,13
+2016,Afghanistan,6,8,14
+2016,Myanmar,5,19,5
+2016,Guatemala,2,4,11
+2016,Pakistan,5,24,13
+2016,Mozambique,3,17,10
+2016,Senegal,6,14,2
+2016,Côte d’Ivoire,4,19,7
+2016,India,3,11,10
+2016,Peru,7,17,14
+2016,Angola,0,10,1
+2016,Ghana,2,11,4
+2016,United Arab Emirates,6,1,11
+2016,Turkey,0,20,7
+2016,Malaysia,2,11,5
+2016,Togo,9,5,5
+2016,Syrian Arab Republic,9,3,5
+2016,Rwanda,5,11,3
+2016,Singapore,0,13,2
+2016,Egypt,6,23,7
+2016,Haiti,8,15,8
+2016,Indonesia,6,22,6
+2016,Eritrea,9,21,0
+2016,Madagascar,2,22,4
+2016,Nepal,6,23,11
+2016,Liberia,4,11,10
+2016,Chile,3,22,13
+2016,Ecuador,4,9,1
+2016,Panama,4,23,6
+2016,Zimbabwe,5,14,5
+2016,Greece,8,15,14
+2016,Thailand,3,16,10
+2016,Mexico,0,1,11
+2016,Portugal,7,19,6
+2016,Paraguay,8,0,6
+2016,El Salvador,9,1,8
+2016,Libya,2,4,12
+2016,Morocco,4,23,5
+2016,Yemen,8,2,1
+2016,Mongolia,7,16,12
+2016,Tajikistan,9,11,3
+2016,Qatar,4,11,13
+2016,Costa Rica,7,17,8
+2016,Viet Nam,9,24,3
+2016,Algeria,7,7,1
+2016,Gabon,7,2,7
+2016,Jordan,0,15,13
+2016,Guinea-Bissau,6,14,3
+2016,Zambia,9,12,8
+2016,Albania,4,20,12
+2016,Brazil,1,1,8
+2016,Bolivia (Plurinational State of),7,19,7
+2016,Saudi Arabia,2,5,1
+2016,Uzbekistan,9,2,13
+2016,Kyrgyzstan,3,1,10
+2016,Azerbaijan,9,20,12
+2016,Fiji,7,7,11
+2016,South Africa,3,11,4
+2016,Guyana,8,23,7
+2016,Poland,9,23,2
+2016,Lithuania,8,21,4
+2016,Ukraine,9,2,13
+2016,Estonia,3,3,12
+2016,Israel,0,18,14
+2016,Bulgaria,1,16,8
+2016,Croatia,7,0,6
+2016,Cuba,2,17,12
+2016,Romania,1,16,14
+2016,United States of America,2,8,6
+2016,Belarus,1,20,13
+2016,Georgia,3,18,0
+2016,Slovenia,0,7,1
+2016,Iceland,2,7,8
+2016,Montenegro,9,13,10
+2016,Uruguay,5,17,13
+2016,Republic of Korea,4,3,13
+2016,Samoa,1,24,3
+2016,Saint Lucia,6,11,13
+2016,Norway,7,6,7
+2016,Ireland,5,8,9
+2016,Argentina,4,12,1
+2016,Grenada,6,4,7
+2016,Antigua and Barbuda,9,18,8
+2016,Seychelles,9,17,7
+2016,Colombia,9,6,7
+2016,Japan,1,0,11
+2015,United Republic of Tanzania,5,16,2
+2015,Jamaica,0,13,12
+2015,China,7,23,14
+2015,Australia,2,19,12
+2015,Republic of Moldova,9,14,11
+2015,Bosnia and Herzegovina,0,0,14
+2015,Lebanon,2,2,7
+2015,Cyprus,3,7,1
+2015,Austria,8,11,9
+2015,Russian Federation,5,5,9
+2015,Czechia,1,16,14
+2015,Luxembourg,7,15,14
+2015,Spain,5,19,6
+2015,Netherlands,2,19,1
+2015,Bahamas,3,17,5
+2015,Latvia,8,0,12
+2015,Germany,0,2,1
+2015,Barbados,5,20,3
+2015,Switzerland,8,20,9
+2015,Kiribati,4,1,2
+2014,Honduras,6,23,2
+2013,Belgium,2,23,10

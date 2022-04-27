@@ -1,138 +1,139 @@
-2017,Nicaragua,78,0.04,0
-2017,Central African Republic,93,0.48,7
-2017,Ethiopia,61,0.15,6
-2017,Iraq,65,0.28,2
-2017,Mauritius,65,0.39,8
-2017,Comoros,88,0.36,6
-2017,Sri Lanka,83,0.21,7
-2017,Iran (Islamic Republic of),85,0.06,4
-2017,Botswana,56,0.35,0
-2017,Maldives,96,0.36,7
-2017,Eswatini,89,0.48,5
-2017,Canada,58,0.05,8
-2017,Serbia,75,0.11,4
-2017,Cabo Verde,84,0.25,7
-2017,The former Yugoslav Republic of Macedonia,88,0.48,6
-2017,Finland,75,0.21,3
-2017,Saint Kitts and Nevis,89,0.38,8
-2016,Cambodia,84,0.26,0
-2016,Guatemala,82,0.20,3
-2016,Mali,68,0.31,7
-2016,Mexico,87,0.08,1
-2016,Chad,94,0.04,3
-2016,Guinea,84,0.08,9
-2016,South Sudan,60,0.12,0
-2016,Bolivia (Plurinational State of),56,0.04,2
-2016,Haiti,69,0.48,9
-2016,Afghanistan,54,0.30,4
-2016,Côte d’Ivoire,68,0.34,2
-2016,Saudi Arabia,52,0.47,5
-2016,Uzbekistan,64,0.16,7
-2016,Syrian Arab Republic,52,0.17,6
-2016,Viet Nam,70,0.00,1
-2016,Azerbaijan,53,0.27,9
-2016,Zimbabwe,73,0.40,2
-2016,Yemen,75,0.45,9
-2016,Senegal,79,0.41,4
-2016,India,95,0.08,6
-2016,Paraguay,83,0.12,5
-2016,Kenya,91,0.36,5
-2016,Uganda,95,0.31,7
-2016,Jordan,86,0.16,2
-2016,Niger,65,0.50,2
-2016,Bangladesh,84,0.04,8
-2016,Qatar,60,0.24,3
-2016,Mozambique,65,0.13,3
-2016,Congo,83,0.08,0
-2016,Costa Rica,59,0.44,1
-2016,Myanmar,99,0.37,5
-2016,Madagascar,94,0.14,6
-2016,Slovenia,69,0.28,5
-2016,Ukraine,81,0.34,5
-2016,United Arab Emirates,56,0.09,7
-2016,Peru,71,0.34,2
-2016,Zambia,68,0.15,9
-2016,Belarus,69,0.04,9
-2016,Nepal,73,0.09,5
-2016,Liberia,82,0.50,3
-2016,Albania,76,0.09,9
-2016,Algeria,99,0.23,6
-2016,Armenia,67,0.42,9
-2016,Singapore,88,0.23,6
-2016,South Africa,58,0.02,6
-2016,Dominican Republic,56,0.37,0
-2016,Georgia,61,0.15,1
-2016,Morocco,92,0.47,7
-2016,Timor-Leste,80,0.44,6
-2016,Namibia,51,0.04,6
-2016,Philippines,96,0.42,6
-2016,Indonesia,72,0.45,2
-2016,Brazil,70,0.18,3
-2016,Togo,59,0.27,1
-2016,Bhutan,63,0.40,6
-2016,Guyana,87,0.21,8
-2016,Tajikistan,50,0.37,9
-2016,Israel,58,0.22,9
-2016,Kyrgyzstan,86,0.23,4
-2016,Cuba,77,0.45,4
-2016,Malaysia,95,0.34,5
-2016,Thailand,90,0.41,1
-2016,Chile,90,0.44,8
-2016,Ecuador,97,0.17,1
-2016,Eritrea,97,0.27,9
-2016,Colombia,55,0.18,6
-2016,El Salvador,99,0.32,8
-2016,Poland,51,0.24,2
-2016,Panama,65,0.39,2
-2016,Burkina Faso,78,0.31,7
-2016,Portugal,78,0.44,8
-2016,Bulgaria,70,0.30,1
-2016,Montenegro,60,0.49,0
-2016,Greece,90,0.40,8
-2016,Fiji,64,0.20,4
-2016,United States of America,79,0.03,3
-2016,Republic of Korea,71,0.44,2
-2016,Romania,95,0.08,4
-2016,Rwanda,96,0.43,5
-2016,Pakistan,87,0.27,6
-2016,Japan,99,0.20,4
-2016,Turkey,87,0.17,3
-2016,Mongolia,72,0.10,4
-2016,Brunei Darussalam,64,0.24,6
-2016,Norway,58,0.00,9
-2016,Sao Tome and Principe,73,0.27,1
-2016,Croatia,51,0.34,8
-2016,Samoa,92,0.22,6
-2016,New Zealand,58,0.21,5
-2016,Ireland,53,0.07,2
-2016,Estonia,53,0.02,5
-2016,Lithuania,55,0.49,9
-2016,Uruguay,71,0.25,3
-2016,Vanuatu,57,0.18,8
-2016,Grenada,82,0.01,5
-2016,Tonga,74,0.19,6
-2016,Argentina,51,0.46,7
-2016,Ghana,50,0.49,1
-2016,Belize,98,0.04,8
-2016,Monaco,54,0.17,4
-2016,Hungary,56,0.46,7
-2016,Iceland,85,0.06,2
-2015,United Republic of Tanzania,97,0.12,1
-2015,Jamaica,99,0.23,6
-2015,Republic of Moldova,82,0.11,2
-2015,Lebanon,54,0.29,0
-2015,Latvia,96,0.06,5
-2015,Cyprus,76,0.16,7
-2015,Switzerland,59,0.20,6
-2015,Bahamas,79,0.41,0
-2015,Austria,85,0.32,4
-2015,Czechia,95,0.47,4
-2015,Barbados,69,0.33,4
-2015,Germany,92,0.18,6
-2015,Bosnia and Herzegovina,96,0.45,3
-2015,Italy,56,0.47,7
-2015,Australia,52,0.37,2
-2015,Luxembourg,63,0.25,1
-2015,Spain,57,0.35,8
-2013,Mauritania,91,0.35,4
-2013,Belgium,87,0.47,7
+year,country,rehabilitation_count,mental_health_allocation,mental_health_prescription_count
+2017,Nicaragua,36,0.18,9
+2017,Central African Republic,49,0.44,1
+2017,Ethiopia,9,0.08,0
+2017,Iraq,34,0.05,1
+2017,Mauritius,44,0.21,8
+2017,Comoros,28,0.27,3
+2017,Sri Lanka,21,0.03,7
+2017,Iran (Islamic Republic of),20,0.41,7
+2017,Botswana,45,0.12,9
+2017,Maldives,48,0.21,4
+2017,Eswatini,21,0.40,2
+2017,Canada,38,0.28,5
+2017,Serbia,25,0.04,6
+2017,Cabo Verde,19,0.15,9
+2017,The former Yugoslav Republic of Macedonia,17,0.48,4
+2017,Finland,28,0.42,9
+2017,Saint Kitts and Nevis,9,0.46,6
+2016,Cambodia,26,0.17,9
+2016,Guatemala,9,0.36,0
+2016,Mali,33,0.13,9
+2016,Mexico,43,0.06,9
+2016,Chad,22,0.31,4
+2016,Guinea,31,0.14,3
+2016,South Sudan,38,0.01,7
+2016,Bolivia (Plurinational State of),21,0.15,9
+2016,Haiti,48,0.29,7
+2016,Afghanistan,40,0.02,6
+2016,Côte d’Ivoire,20,0.14,2
+2016,Saudi Arabia,17,0.38,8
+2016,Uzbekistan,22,0.13,2
+2016,Syrian Arab Republic,32,0.30,4
+2016,Viet Nam,11,0.27,2
+2016,Azerbaijan,35,0.04,0
+2016,Zimbabwe,37,0.24,0
+2016,Yemen,35,0.35,7
+2016,Senegal,32,0.09,6
+2016,India,37,0.01,7
+2016,Paraguay,46,0.05,9
+2016,Kenya,40,0.32,9
+2016,Uganda,14,0.08,2
+2016,Jordan,29,0.15,7
+2016,Niger,26,0.17,0
+2016,Bangladesh,16,0.38,3
+2016,Qatar,9,0.18,6
+2016,Mozambique,48,0.23,5
+2016,Congo,35,0.06,6
+2016,Costa Rica,36,0.18,4
+2016,Myanmar,29,0.36,8
+2016,Madagascar,13,0.01,4
+2016,Slovenia,49,0.23,1
+2016,Ukraine,37,0.39,4
+2016,United Arab Emirates,41,0.25,8
+2016,Peru,12,0.50,4
+2016,Zambia,15,0.19,4
+2016,Belarus,46,0.44,8
+2016,Nepal,23,0.37,1
+2016,Liberia,20,0.41,4
+2016,Albania,10,0.29,0
+2016,Algeria,14,0.04,8
+2016,Armenia,34,0.43,5
+2016,Singapore,16,0.29,1
+2016,South Africa,22,0.34,9
+2016,Dominican Republic,38,0.02,8
+2016,Georgia,23,0.05,1
+2016,Morocco,38,0.38,1
+2016,Timor-Leste,21,0.49,7
+2016,Namibia,28,0.00,5
+2016,Philippines,16,0.10,7
+2016,Indonesia,38,0.25,6
+2016,Brazil,43,0.16,7
+2016,Togo,19,0.24,2
+2016,Bhutan,36,0.04,1
+2016,Guyana,19,0.12,2
+2016,Tajikistan,29,0.41,3
+2016,Israel,46,0.41,5
+2016,Kyrgyzstan,39,0.29,2
+2016,Cuba,10,0.49,0
+2016,Malaysia,30,0.04,2
+2016,Thailand,1,0.24,8
+2016,Chile,29,0.42,8
+2016,Ecuador,0,0.38,1
+2016,Eritrea,12,0.16,5
+2016,Colombia,26,0.27,6
+2016,El Salvador,21,0.10,1
+2016,Poland,11,0.30,9
+2016,Panama,49,0.28,9
+2016,Burkina Faso,20,0.41,2
+2016,Portugal,47,0.17,9
+2016,Bulgaria,42,0.30,8
+2016,Montenegro,8,0.08,4
+2016,Greece,45,0.47,8
+2016,Fiji,47,0.23,7
+2016,United States of America,25,0.12,0
+2016,Republic of Korea,43,0.15,7
+2016,Romania,19,0.10,0
+2016,Rwanda,9,0.14,3
+2016,Pakistan,17,0.43,9
+2016,Japan,49,0.11,0
+2016,Turkey,26,0.47,1
+2016,Mongolia,8,0.04,0
+2016,Brunei Darussalam,1,0.16,5
+2016,Norway,24,0.41,6
+2016,Sao Tome and Principe,19,0.30,8
+2016,Croatia,31,0.02,0
+2016,Samoa,20,0.06,5
+2016,New Zealand,19,0.47,9
+2016,Ireland,43,0.24,5
+2016,Estonia,9,0.25,2
+2016,Lithuania,31,0.41,0
+2016,Uruguay,27,0.24,9
+2016,Vanuatu,6,0.16,3
+2016,Grenada,16,0.44,2
+2016,Tonga,0,0.43,0
+2016,Argentina,33,0.02,8
+2016,Ghana,32,0.23,6
+2016,Belize,33,0.45,2
+2016,Monaco,30,0.40,5
+2016,Hungary,18,0.22,3
+2016,Iceland,35,0.49,2
+2015,United Republic of Tanzania,15,0.01,9
+2015,Jamaica,27,0.22,4
+2015,Republic of Moldova,43,0.19,0
+2015,Lebanon,49,0.31,5
+2015,Latvia,44,0.36,2
+2015,Cyprus,38,0.36,3
+2015,Switzerland,46,0.36,5
+2015,Bahamas,38,0.15,8
+2015,Austria,6,0.36,5
+2015,Czechia,38,0.08,7
+2015,Barbados,10,0.27,8
+2015,Germany,2,0.46,8
+2015,Bosnia and Herzegovina,11,0.18,3
+2015,Italy,22,0.41,9
+2015,Australia,5,0.47,4
+2015,Luxembourg,27,0.01,1
+2015,Spain,25,0.27,5
+2013,Mauritania,29,0.20,0
+2013,Belgium,45,0.34,5

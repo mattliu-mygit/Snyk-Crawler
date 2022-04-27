@@ -109,13 +109,13 @@ toJSON()
                               });
 
                               mhJSON.ptsd_count = Math.floor(
-                                Math.random() * 100
+                                Math.random() * 10
                               );
                               mhJSON.depression_count = Math.floor(
-                                Math.random() * 100
+                                Math.random() * 25
                               );
                               mhJSON.insanity_count = Math.floor(
-                                Math.random() * 100
+                                Math.random() * 15
                               );
                               patient_ledgers.push({
                                 year: mhJSON.Period,
@@ -123,7 +123,7 @@ toJSON()
                                 type: "mental hospital",
                                 cost: Math.floor(Math.random() * 50),
                                 diagnoses_count: Math.floor(
-                                  Math.random() * 100
+                                  Math.random() * 50 + 50
                                 ),
                                 patient_count: Math.floor(Math.random() * 75),
                               });
@@ -242,7 +242,9 @@ toJSON()
                                 year: mhuJSON.Period,
                                 country: mhuJSON.Location,
                                 cost: Math.floor(Math.random() * 50),
-                                diagnoses_count: Math.floor(Math.random() * 50 + 50),
+                                diagnoses_count: Math.floor(
+                                  Math.random() * 50 + 50
+                                ),
                                 patient_count: Math.floor(Math.random() * 75),
                               });
                             });
