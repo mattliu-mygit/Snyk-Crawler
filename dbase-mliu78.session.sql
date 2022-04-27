@@ -1,12 +1,12 @@
-DROP TABLE IF EXISTS Country;
-CREATE TABLE Country (
-  name varchar(70),
-  region varchar(50),
-  psychiatrist_count float,
-  population int,
-  PRIMARY KEY(name)
-);
-LOAD DATA LOCAL INFILE '../../web-security-project-crawler/Snyk-Crawler/processed/country.csv' INTO TABLE Country FIELDS TERMINATED BY ',';
-show WARNINGS;
-SELECT *
-FROM Country;
+-- 4. What type of facility do most people go to for each country
+SELECT Facility.country,
+  Facility.year,
+  MAX(Patient_Ledger.patient_count) as count,
+  Facility.facility_type
+FROM Facility
+  JOIN Patient_Ledger on Facility.year = Patient_Ledger.year
+  AND Facility.country = Patient_Ledger.country
+  AND Facility.facility_type = Patient_Ledger.facility_type
+GROUP BY Facility.country,
+  Facility.year
+ORDER BY Facility.country;
