@@ -74,11 +74,11 @@ CREATE TABLE Patient_Ledger (
   FOREIGN KEY(country) REFERENCES Facility(country),
   FOREIGN KEY(year) REFERENCES Facility(year)
 );
-LOAD DATA LOCAL INFILE '../../../../web-security-project-crawler/Snyk-Crawler/processed/country.csv' INTO TABLE Country FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '../../../../web-security-project-crawler/Snyk-Crawler/processed/suicide.csv' INTO TABLE Suicide_Rates FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '../../../../web-security-project-crawler/Snyk-Crawler/processed/facility.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '../../../../web-security-project-crawler/Snyk-Crawler/processed/mh.csv' INTO TABLE Mental_Hospital FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '../../../../web-security-project-crawler/Snyk-Crawler/processed/mhu.csv' INTO TABLE General_Hospital FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '../../../../web-security-project-crawler/Snyk-Crawler/processed/outpatient.csv' INTO TABLE Outpatient FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '../../../../web-security-project-crawler/Snyk-Crawler/processed/day_treatment.csv' INTO TABLE Day_Treatment FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '../../../../web-security-project-crawler/Snyk-Crawler/processed/patient_ledger.csv' INTO TABLE Patient_Ledger FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/Users/karenhe/Documents/601.315/Snyk-Crawler/processed/country.csv' INTO TABLE Country FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/Users/karenhe/Documents/601.315/Snyk-Crawler/processed/suicide.csv' INTO TABLE Suicide_Rates FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/Users/karenhe/Documents/601.315/Snyk-Crawler/processed/facility.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/Users/karenhe/Documents/601.315/Snyk-Crawler/processed/mh.csv' INTO TABLE Mental_Hospital FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/Users/karenhe/Documents/601.315/Snyk-Crawler/processed/mhu.csv' INTO TABLE General_Hospital FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/Users/karenhe/Documents/601.315/Snyk-Crawler/processed/outpatient.csv' INTO TABLE Outpatient FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/Users/karenhe/Documents/601.315/Snyk-Crawler/processed/day_treatment.csv' INTO TABLE Day_Treatment FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/Users/karenhe/Documents/601.315/Snyk-Crawler/processed/patient_ledger.csv' INTO TABLE Patient_Ledger FIELDS TERMINATED BY ',';

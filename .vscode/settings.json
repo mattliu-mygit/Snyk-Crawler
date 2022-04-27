@@ -12,6 +12,19 @@
       "database": "22sp_mliu78_db",
       "username": "22sp_mliu78",
       "password": "sJFZiyQgro"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "dbase.cs.jhu.edu",
+      "port": 3306,
+      "driver": "MariaDB",
+      "name": " 22sp_khe8",
+      "username": "22sp_khe8",
+      "password": "0iXBpeXEQR",
+      "database": "22sp_khe8_db"
     }
   ]
 }

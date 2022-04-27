@@ -230,7 +230,7 @@ toJSON()
                                   ),
                                 });
                               mhuJSON.rehabilitation_count = Math.floor(
-                                Math.random() * 50 + 50
+                                Math.random() * 50
                               );
                               mhuJSON.mental_health_allocation = (
                                 Math.random() * 0.5
@@ -242,7 +242,7 @@ toJSON()
                                 year: mhuJSON.Period,
                                 country: mhuJSON.Location,
                                 cost: Math.floor(Math.random() * 50),
-                                diagnoses_count: Math.floor(Math.random() * 50),
+                                diagnoses_count: Math.floor(Math.random() * 50 + 50),
                                 patient_count: Math.floor(Math.random() * 75),
                               });
                             });
