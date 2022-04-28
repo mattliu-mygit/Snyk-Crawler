@@ -34,9 +34,9 @@ VALUES (
     'outpatient facility',
     2019,
     'New Country Name',
-    0,
-    0,
-    0
+    94,
+    25,
+    0.36
   );
 -- General_Hospital Facility Insertion
 INSERT INTO Facility
@@ -44,9 +44,9 @@ VALUES (
     'mental health unit',
     2019,
     'New Country Name',
-    0,
-    0,
-    0
+    101,
+    23,
+    0.42
   );
 -- Day_Treatment Facility Insertion
 INSERT INTO Facility
@@ -54,42 +54,42 @@ VALUES (
     'day treatment facility',
     2019,
     'New Country Name',
-    0,
-    0,
-    0
+    102,
+    22,
+    0.37
   );
 -- Mental_Hospital Insertion
 INSERT INTO Mental_Hospital
 VALUES (
     2019,
     'New Country Name',
-    0,
-    0,
-    0
+    5,
+    6,
+    10
   );
 -- Outpatient Insertion
 INSERT INTO Outpatient
 VALUES (
     2019,
     'New Country Name',
-    0.0
+    0.7
   );
 -- General_Hospital Insertion
 INSERT INTO General_Hospital
 VALUES (
     2019,
     'New Country Name',
-    0,
-    0.0,
-    0
+    12,
+    0.6,
+    8
   );
 -- Day_Treatment Insertion
 INSERT INTO Day_Treatment
 VALUES (
     2019,
     'New Country Name',
-    0,
-    0.0
+    10,
+    0.26
   );
 /* To insert a patient ledger for each type of facility */
 -- Mental_Hospital Patient_Ledger Insertion
@@ -98,9 +98,9 @@ VALUES (
     'mental hospital',
     2019,
     'New Country Name',
-    0,
-    0,
-    0
+    15,
+    43,
+    25
   );
 -- Outpatient Patient_Ledger Insertion
 INSERT INTO Patient_Ledger
@@ -108,9 +108,9 @@ VALUES (
     'outpatient facility',
     2019,
     'New Country Name',
-    0,
-    0,
-    0
+    14,
+    37,
+    26
   );
 -- General_Hospital Patient_Ledger Insertion
 INSERT INTO Patient_Ledger
@@ -118,9 +118,9 @@ VALUES (
     'mental health unit',
     2019,
     'New Country Name',
-    0,
-    0,
-    0
+    6,
+    40,
+    27
   );
 -- Day_Treatment Patient_Ledger Insertion
 INSERT INTO Patient_Ledger
@@ -128,9 +128,9 @@ VALUES (
     'day treatment facility',
     2019,
     'New Country Name',
-    0,
-    0,
-    0
+    7,
+    39,
+    28
   );
 /* Deletion */
 -- Mental_Hospital Patient_Ledger Deletion
