@@ -10,6 +10,7 @@ AverageSuicide as (
   SELECT country,
     AVG(age_standardized_suicide_rates) as suicide_rates_avg
   FROM Suicide_Rates
+  WHERE sex = 'Both sexes'
   GROUP BY country
 ),
 MinRates as (
