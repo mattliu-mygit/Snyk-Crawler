@@ -1,4 +1,4 @@
--- (1)11. What country has the greatest number of facilities? 
+-- (1). What country has the greatest number of facilities? 
 WITH numFac AS (
   SELECT country,
     SUM(population / 100 * unit_count) as total
@@ -14,14 +14,14 @@ SELECT country
 FROM numFac,
   greatestAmount
 WHERE total = greatest_amount;
--- (2)1. How many mental health units are available for patients per region?
+-- (2). How many mental health units are available for patients per region?
 SELECT region,
   SUM(unit_count) * 100000 AS available_mental_health_units
 FROM Country
   JOIN Facility ON Country.name = Facility.country
 WHERE Facility.facility_type = "mental health unit"
 GROUP BY region;
--- (3)5. What region/country has the greatest number of psychiatrists working in the mental health sector?
+-- (3). What region/country has the greatest number of psychiatrists working in the mental health sector?
 WITH psychCount AS (
   SELECT name,
     SUM(population / 100 * psychiatrist_count) as psych_count
@@ -36,7 +36,7 @@ SELECT name
 FROM psychCount,
   greatestPsych
 WHERE psych_count = greatest_psych;
--- (4)16. In 2019, how many males vs females committed suicide for each country?
+-- (4). In 2019, how many males vs females committed suicide for each country?
 WITH maleSuicide AS (
   SELECT Country.name AS country,
     Country.population / 100000 * Suicide_Rates.age_standardized_suicide_rates AS number_of_male_suicides
@@ -58,11 +58,11 @@ SELECT maleSuicide.country,
   number_of_female_suicides
 FROM maleSuicide
   JOIN femaleSuicide ON maleSuicide.country = femaleSuicide.country;
--- (5)2. In which facility did patients spend the most on average.
+-- (5). In which facility did patients spend the most on average.
 WITH AverageCost AS (
   SELECT Facility.year,
     Facility.country,
-    AVG(Patient_Ledger.cost) as cost
+    AVG(Patient_Ledger.cost) * 100 as cost
   FROM Facility
     JOIN Patient_Ledger on Facility.year = Patient_Ledger.year
     AND Facility.country = Patient_Ledger.country
@@ -75,10 +75,10 @@ WHERE cost = (
     SELECT MAX(cost)
     FROM AverageCost
   );
--- (6)3. What is the total patient count for all facilities for each year of each country
+-- (6). What is the total patient count for all facilities for each year of each country
 SELECT Facility.country,
   Facility.year,
-  SUM(Patient_Ledger.patient_count) as count
+  SUM(Patient_Ledger.patient_count) * 10000 as count
 FROM Facility
   JOIN Patient_Ledger on Facility.year = Patient_Ledger.year
   AND Facility.country = Patient_Ledger.country
@@ -87,9 +87,8 @@ GROUP BY Facility.year,
   Facility.country
 ORDER BY Facility.year,
   Facility.country;
--- (7)4. What type of facility do most people go to for each country
+-- (7). What type of facility do most people go to for each country
 SELECT Facility.country,
-  Facility.year,
   MAX(Patient_Ledger.patient_count) as count,
   Facility.facility_type
 FROM Facility
@@ -99,18 +98,30 @@ FROM Facility
 GROUP BY Facility.country,
   Facility.year
 ORDER BY Facility.country;
--- (8)5. What is total mental health allocation of each country?
+-- (8). What is total mental health allocation of each country?
 SELECT General_Hospital.country,
-  General_Hospital.year,
-  General_Hospital.mental_health_allocation + Outpatient.mental_health_allocation AS mental_health_allocation
+  (
+    General_Hospital.mental_health_allocation + Outpatient.mental_health_allocation
+  ) * 10000000 AS mental_health_allocation
 FROM Outpatient
-  JOIN General_Hospital ON General_Hospital.country = Outpatient.country;
--- (9)7. What region has the highest rates of suicide?
-SELECT region,
-  AVG(age_standardized_suicide_rates) AS available_mental_health_units
-FROM Country
-  JOIN Suicide_Rates ON Country.name = Suicide_Rates.country
-GROUP BY region;
+  JOIN General_Hospital ON General_Hospital.country = Outpatient.country
+GROUP BY Outpatient.country;
+-- (9). What region has the highest rates of suicide?
+WITH avgSuicideRegion AS (
+  SELECT region,
+    AVG(age_standardized_suicide_rates) AS avg_suicide_rate
+  FROM Country
+    JOIN Suicide_Rates ON Country.name = Suicide_Rates.country
+  WHERE sex = "Both sexes"
+  GROUP BY region
+),
+maxSuicideRegion AS (
+  SELECT region,
+    MAX(avg_suicide_rate) AS max_suicide_rate
+  FROM avgSuicideRegion
+)
+SELECT region
+FROM maxSuicideRegion;
 -- (10)23. For each country, what percentage of a patients at a general hospital were rehabilitated after being diagnosed?
 SELECT General_Hospital.country,
   rehabilitation_count / diagnoses_count * 100 AS percentage_rehabilitated
@@ -173,7 +184,7 @@ MinRates as (
   GROUP BY facility_type
 )
 SELECT facility_type,
-  MIN(min_rate)
+  MIN(min_rate) AS lowest_suicide_rate
 FROM MinRates;
 -- (14) What is the United States allocating most of its resources to (greatest to least)?
 SELECT Facility.facility_type,
