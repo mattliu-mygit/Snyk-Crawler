@@ -11,16 +11,16 @@
 	  $psychiatrists = $_POST['psychiatrists'];
 	  $population = $_POST['population'];
     try {
-      if (strlen($country) == 0) {
+      if (is_null($country) || strlen($country) == 0) {
         throw new Exception("Country name cannot be empty");
       }
-      if (strlen($region) == 0) {
+      if (is_null($region) || strlen($region) == 0) {
         throw new Exception("Region name cannot be empty");
       }
-      if (is_double($population)) {
+      if (!is_numeric($population) || !is_double(doubleval($population))) {
         throw new Exception("Population must be an double");
       }
-      if (is_double($psychiatrists)) {
+      if (!is_numeric($psychiatrists) || !is_double(doubleval($psychiatrists))) {
         throw new Exception("Population must be an double");
       }
       try {
