@@ -1,45 +1,47 @@
 <!-- hw4.html  Do not modify this file. -->
 <html>
-  <body>
-    <form action="Cleanup.php" method="post">
-      Cleanup
-      <input type="submit" />
-    </form>
-    <form action="Startup.php" method="post">
-      Startup
-      <input type="submit" />
-    </form>
-    <h1>Insert</h1>
-    <a href="./InsertCountry.html">Insert Country Tuple</a>
-    <a href="./InsertSuicideRate.html">Insert Suicide Rate Tuple</a>
-    <a href="./InsertFacility.html">Insert Facility Tuple</a>
-    <h1>Delete</h1>
-    <a href="./DeleteCountry.html">Delete Country Tuple</a>
-    <a href="./DeleteSuicideRate.html">Delete Suicide Rate Tuple</a>
-    <a href="./DeleteFacility.html">Delete Facility Tuple</a>
-    <br /><br />
 
-    <!-- (b) -->
-    <h2>Show Percentages and Weighted s</h2>
-    <form action="HW4_ShowPercentages.php" method="post">
-      SID: <input type="text" name="SID" /> <br />
-      <input type="submit" />
-    </form>
-    <br /><br />
+<body>
+  <form action="Cleanup.php" method="post">
+    Cleanup
+    <input type="submit" />
+  </form>
+  <form action="Startup.php" method="post">
+    Startup
+    <input type="submit" />
+  </form>
+  <h1>Insert</h1>
+  <a href="./InsertCountry.html">Insert Country Tuple</a>
+  <a href="./InsertSuicideRate.html">Insert Suicide Rate Tuple</a>
+  <a href="./InsertFacility.html">Insert Facility Tuple</a>
+  <h1>Delete</h1>
+  <a href="./DeleteCountry.html">Delete Country Tuple</a>
+  <a href="./DeleteSuicideRate.html">Delete Suicide Rate Tuple</a>
+  <a href="./DeleteFacility.html">Delete Facility Tuple</a>
+  <br /><br />
 
-    <!-- (c) -->
-    <h2>Full Table of Raw Scores</h2>
-    <form action="HW4_ShowAllRawScores.php" method="post">
-      password: <input type="text" name="password" /> <br />
-      <input type="submit" />
-    </form>
-    <br /><br />
+  <!-- (b) -->
+  <h2>How many ______ (type of facility) are available for patients for each region?</h2>
+  <form action="SetupProcedure.php" method="post">
+    Facility Type: <input type="text" name="facility_type" /> <br />
+    <input type="submit" />
+  </form>
+  <br /><br />
 
-    <!-- (d) -->
-    <h2>Full Table of Percentages with Weighted s</h2>
-    <form action="HW4_ShowAllCourses.php" method="post">
-      password: <input type="text" name="password" /> <br />
-      <input type="submit" />
-    </form>
-  </body>
+  <!-- (c) -->
+  <h2>Full Table of Raw Scores</h2>
+  <form action="HW4_ShowAllRawScores.php" method="post">
+    password: <input type="text" name="password" /> <br />
+    <input type="submit" />
+  </form>
+  <br /><br />
+
+  <!-- (d) -->
+  <h2>Full Table of Percentages with Weighted s</h2>
+  <form action="HW4_ShowAllCourses.php" method="post">
+    password: <input type="text" name="password" /> <br />
+    <input type="submit" />
+  </form>
+</body>
+
 </html>
