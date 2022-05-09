@@ -72,7 +72,7 @@
         }
         $sqlInsertSpecFacility = $conn->prepare("INSERT INTO Outpatient VALUES (?,?,?)");
         $sqlInsertSpecFacility->bind_param("sss", $year, $country, $allocation);
-        $specTable = "<tr><th> Year </th><th> Country </th> <th>  Allocation to Mental Health ($ Millions) </th></tr>
+        $specTable = "<tr><th> Year </th><th> Country </th> <th>  Allocation to Mental Health </th></tr>
         <tr><td>".$year."</td><td>".$country."</td><td>".$allocation."</td></tr>";
       } else if ($type == "mental health unit") {
         $allocation = $_POST['allocation2'];
@@ -89,7 +89,7 @@
         }
         $sqlInsertSpecFacility = $conn->prepare("INSERT INTO General_Hospital VALUES (?,?,?,?,?)");
         $sqlInsertSpecFacility->bind_param("sssss", $year, $country, $rehab, $allocation, $prescription);
-        $specTable = "<tr><th> Year </th><th> Country </th> <th>  Rehab Patients (Millions) </th>  <th>  Allocation to Mental Health ($ Millions) </th><th> Total Prescription Count (Millions) </th></tr>
+        $specTable = "<tr><th> Year </th><th> Country </th> <th>  Rehab Patients </th>  <th>  Allocation to Mental Health </th><th> Total Prescription Count </th></tr>
         <tr><td>".$year."</td><td>".$country."</td><td>".$rehab."</td><td>".$allocation."</td><td>".$prescription."</td></tr>";
       } else if ($type == "day treatment facility") {
         $closing = $_POST['closing'];
@@ -116,11 +116,11 @@
       echo "<h2>Successfully Inserted</h2><br>";
       echo "<h3>Facility</h3><br>";
       echo "<table border=\"1px solid black\">";
-      echo "<tr><th> Facility Type </th> <th> Year </th> <th> Country </th> <th> Patient  Stay Duration (Days) </th> <th> Cost ($10 Million) </th> <th> Facility Unit Count (Thousands) </th></tr>";
+      echo "<tr><th> Facility Type </th> <th> Year </th> <th> Country </th> <th> Patient Stay Duration (Days) </th> <th> Cost (USD) </th> <th> Facility Unit Count </th></tr>";
       echo "<tr><td>".$type."</td><td>".$year."</td><td>".$country."</td><td>".$stay."</td><td>".$cost."</td><td>".$count."</td></tr></table>";
       echo "<h3>Patient Ledger</h3><br>";
       echo "<table border=\"1px solid black\">";
-      echo "<tr><th> Facility Type </th> <th> Year </th> <th> Country </th> <th>  Patient Cost ($1000) </th> <th>  Diagnosis County (Million) </th> <th>  Patient Count (Millions) </th></tr>";
+      echo "<tr><th> Facility Type </th> <th> Year </th> <th> Country </th> <th>  Patient Cost </th> <th>  Diagnosis County </th> <th>  Patient Count </th></tr>";
       echo "<tr><td>".$type."</td><td>".$year."</td><td>".$country."</td><td>".$patient_cost."</td><td>".$diagnoses."</td><td>".$patient_count."</td></tr></table>";
       echo "<h3>".$type."</h3><br>";
       echo "<table border=\"1px solid black\">";
