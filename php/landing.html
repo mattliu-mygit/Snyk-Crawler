@@ -22,24 +22,24 @@
 
   <!-- (b) -->
   <h2>How many ______ (type of facility) are available for patients for each region?</h2>
-  <form action="SetupProcedure.php" method="post">
+  <form action="query2.php" method="post">
     Facility Type: <input type="text" name="facility_type" /> <br />
     <input type="submit" />
   </form>
   <br /><br />
 
   <!-- (c) -->
-  <h2>Full Table of Raw Scores</h2>
-  <form action="HW4_ShowAllRawScores.php" method="post">
-    password: <input type="text" name="password" /> <br />
+  <h2>What is ______ (country) allocating its resources to? (greatest to least)</h2>
+  <form action="query14.php" method="post">
+    Country: <input type="text" name="country" /> <br />
     <input type="submit" />
   </form>
   <br /><br />
 
   <!-- (d) -->
-  <h2>Full Table of Percentages with Weighted s</h2>
-  <form action="HW4_ShowAllCourses.php" method="post">
-    password: <input type="text" name="password" /> <br />
+  <h2>What are the top ______ countries with the most suicides committed in 2016?</h2>
+  <form action="query15.php" method="post">
+    number: <input type="text" name="num" /> <br />
     <input type="submit" />
   </form>
 </body>
