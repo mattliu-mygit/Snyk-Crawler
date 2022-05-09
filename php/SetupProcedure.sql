@@ -54,7 +54,7 @@ DELIMITER //
 
 DROP FUNCTION IF EXISTS CheckNumber //
 
-CREATE FUNCTION CheckNumber(num int)
+CREATE FUNCTION CheckNumber()
 RETURNS INTEGER
 BEGIN
       RETURN (SELECT COUNT(name) FROM Country);
@@ -63,7 +63,7 @@ DROP PROCEDURE IF EXISTS ShowTopCountrySuicides //
 
 CREATE PROCEDURE ShowTopCountrySuicides(IN num int)
 BEGIN
-    IF num < CheckNumber(num) THEN
+    IF num < CheckNumber() THEN
         WITH popSuicide AS (
             SELECT Country.name,
                 Suicide_Rates.year,
@@ -85,6 +85,51 @@ BEGIN
     ELSE
        SELECT NULL as Error;
    END IF;
+END; //
+
+DELIMITER ;
+
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS ShowPatientRehabilitation //
+
+CREATE PROCEDURE ShowPatientRehabilitation(IN country varchar(70))
+BEGIN
+   IF CheckCountry(country) != 0 THEN
+        WITH rehabilitation AS (
+        SELECT rehabilitation_count / diagnoses_count * 100 AS percentage_rehabilitated, diagnoses_count * 100000 AS total_patients
+        FROM General_Hospital
+            JOIN Patient_Ledger ON General_Hospital.country = Patient_Ledger.country
+        WHERE Patient_Ledger.facility_type = "mental health unit" AND General_Hospital.country = country)
+        SELECT percentage_rehabilitated, 100 - percentage_rehabilitated AS percentage_not_rehabilitated, total_patients
+        FROM rehabilitation;
+    ELSE
+       SELECT NULL as Error;
+   END IF;
+END; //
+
+DELIMITER ;
+
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS ShowPercentageDiagnoses //
+
+CREATE PROCEDURE ShowPercentageDiagnoses(IN country varchar(70))
+BEGIN
+    IF CheckCountry(country) != 0 THEN
+        WITH diagnoses AS(
+        SELECT ptsd_count / diagnoses_count * 100 AS percentage_ptsd,
+               Insanity_count / diagnoses_count * 100 AS percentage_insanity,
+               depression_count / diagnoses_count * 100 AS percentage_depression,
+               diagnoses_count * 90000 as total_patients
+        FROM Patient_Ledger
+            JOIN Mental_Hospital ON Patient_Ledger.country = Mental_Hospital.country
+        WHERE Patient_Ledger.facility_type = "mental hospital" AND Mental_Hospital.country = country)
+        SELECT percentage_ptsd, percentage_insanity, percentage_depression, 100 - percentage_depression - percentage_insanity - percentage_insanity AS percentage_other, total_patients
+        FROM diagnoses;
+    ELSE
+       SELECT NULL as Error;
+    END IF;
 END; //
 
 DELIMITER ;
