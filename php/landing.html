@@ -65,8 +65,8 @@
           ______ (total patient count)?
         </option>
         <option value="15">
-          What are the top ______ countries with the most suicides committed in
-          2016?
+          What is the average amount patients spent in a facility for each
+          country?
         </option>
       </select>
       <br />
@@ -115,6 +115,9 @@
         } else if (event == "13") {
           div.innerHTML =
             '<!-- (6) --><h2>What countries have total patient count for all facilities below ______(total patient count)?</h2><form action="query6.php" method="post"> Total patient count: <input type="text" name="num" /> <br /> <input type="submit" /></form><br /><br />';
+        } else if (event == "14") {
+          div.innerHTML =
+            '<!-- (5) --><h2>  What is the average amount patients spent in a facility for each country?</h2><form action="query5.php" method="post">  <input type="submit" /></form><br /><br />';
         }
         derp.removeChild(derp.lastChild);
         derp.appendChild(div);
