@@ -194,7 +194,7 @@ BEGIN
         SELECT MAX(total) as greatest_amount
         FROM numFac
     )
-    SELECT country
+    SELECT country, greatest_amount
     FROM numFac,
             greatestAmount
     WHERE total = greatest_amount;
@@ -272,6 +272,31 @@ BEGIN
    ELSE
        SELECT NULL as Error;
    END IF;
+END; //
+
+DELIMITER ;
+
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS ShowRegionHighestSuicide//
+
+CREATE PROCEDURE ShowRegionHighestSuicide()
+BEGIN
+    WITH avgSuicideRegion AS (
+    SELECT region,
+        AVG(age_standardized_suicide_rates) AS avg_suicide_rate
+    FROM Country
+        JOIN Suicide_Rates ON Country.name = Suicide_Rates.country
+    WHERE sex = "Both sexes"
+    GROUP BY region
+    ),
+    maxSuicideRegion AS (
+    SELECT region,
+        MAX(avg_suicide_rate) AS max_suicide_rate
+    FROM avgSuicideRegion
+    )
+    SELECT region, max_suicide_rate
+    FROM maxSuicideRegion;
 END; //
 
 DELIMITER ;
