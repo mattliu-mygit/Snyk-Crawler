@@ -10,18 +10,15 @@
     Startup
     <input type="submit" />
   </form>
-  <h1>Insert</h1>
-  <a href="./InsertCountry.html">Insert Country Tuple</a>
-  <a href="./InsertSuicideRate.html">Insert Suicide Rate Tuple</a>
-  <a href="./InsertFacility.html">Insert Facility Tuple</a>
-  <h1>Delete</h1>
-  <a href="./DeleteCountry.html">Delete Country Tuple</a>
-  <a href="./DeleteSuicideRate.html">Delete Suicide Rate Tuple</a>
-  <a href="./DeleteFacility.html">Delete Facility Tuple</a>
+  <h3><a href="./InsertPage.html">Insert Tuple</a></h3>
+  <h3><a href="./DeletePage.html">Delete Tuple</a></h3>
   <br /><br />
 
   <!-- (2) -->
-  <h2>How many ______ (type of facility) are available for patients for each region?</h2>
+  <h2>
+    How many ______ (type of facility) are available for patients for each
+    region?
+  </h2>
   <form action="query2.php" method="post">
     Facility Type: <input type="text" name="facility_type" /> <br />
     <input type="submit" />
@@ -29,7 +26,9 @@
   <br /><br />
 
   <!-- (14) -->
-  <h2>What is ______ (country) allocating its resources to? (greatest to least)</h2>
+  <h2>
+    What is ______ (country) allocating its resources to? (greatest to least)
+  </h2>
   <form action="query14.php" method="post">
     Country: <input type="text" name="country" /> <br />
     <input type="submit" />
@@ -37,7 +36,10 @@
   <br /><br />
 
   <!-- (15) -->
-  <h2>What are the top ______ countries with the most suicides committed in 2016?</h2>
+  <h2>
+    What are the top ______ countries with the most suicides committed in
+    2016?
+  </h2>
   <form action="query15.php" method="post">
     Number: <input type="text" name="num" /> <br />
     <input type="submit" />
@@ -45,8 +47,22 @@
   <br /><br />
 
   <!-- (10) -->
-  <h2>For ______ (country), what percentage of general hospital patients were rebabilitated after being diagnosed?</h2>
+  <h2>
+    For ______ (country), what percentage of general hospital patients were
+    rebabilitated after being diagnosed?
+  </h2>
   <form action="query10.php" method="post">
+    Country: <input type="text" name="country" /> <br />
+    <input type="submit" />
+  </form>
+  <br /><br />
+
+  <!-- (11) -->
+  <h2>
+    What percentage of diagnoses were for PTSD, insanity, and depression in
+    mental health hospitals for ______ (country)?
+  </h2>
+  <form action="query11.php" method="post">
     Country: <input type="text" name="country" /> <br />
     <input type="submit" />
   </form>
