@@ -58,7 +58,7 @@ SELECT maleSuicide.country,
   number_of_female_suicides
 FROM maleSuicide
   JOIN femaleSuicide ON maleSuicide.country = femaleSuicide.country;
--- (5). In which facility did patients spend the most on average.
+-- (5). What is the average amount patients spent in a facility for each country?
 WITH AverageCost AS (
   SELECT Facility.year,
     Facility.country,
@@ -100,13 +100,17 @@ GROUP BY Facility.country,
   Facility.year
 ORDER BY Facility.country;
 -- (8). What is total mental health allocation of each country?
-SELECT General_Hospital.country,
+WITH totalAllocation AS (
+SELECT General_Hospital.country AS country,
   (
     General_Hospital.mental_health_allocation + Outpatient.mental_health_allocation
   ) * 10000000 AS mental_health_allocation
 FROM Outpatient
   JOIN General_Hospital ON General_Hospital.country = Outpatient.country
-GROUP BY Outpatient.country;
+GROUP BY Outpatient.country) 
+SELECT country, mental_health_allocation
+FROM totalAllocation
+WHERE mental_health_allocation > 20000000;
 -- (9). What region has the highest rates of suicide?
 WITH avgSuicideRegion AS (
   SELECT region,

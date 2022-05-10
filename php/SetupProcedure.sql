@@ -415,3 +415,21 @@ BEGIN
 END; //
 
 DELIMITER ;
+
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS ShowAverageSpending//
+
+CREATE PROCEDURE ShowAverageSpending()
+BEGIN
+    SELECT
+        Facility.country,
+        AVG(Patient_Ledger.cost) * 100 as cost
+    FROM Facility
+        JOIN Patient_Ledger on Facility.year = Patient_Ledger.year
+        AND Facility.country = Patient_Ledger.country
+        AND Facility.facility_type = Patient_Ledger.facility_type
+        GROUP BY Facility.country;
+END; //
+
+DELIMITER ;
