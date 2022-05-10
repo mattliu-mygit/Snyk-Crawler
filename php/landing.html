@@ -1,119 +1,131 @@
 <!-- landing.html -->
 <html>
+  <body>
+    <form action="Cleanup.php" method="post">
+      Cleanup
+      <input type="submit" />
+    </form>
+    <form action="Startup.php" method="post">
+      Startup
+      <input type="submit" />
+    </form>
+    <h3><a href="./InsertPage.html">Insert Tuple</a></h3>
+    <h3><a href="./DeletePage.html">Delete Tuple</a></h3>
+    <br /><br />
 
-<body>
-  <form action="Cleanup.php" method="post">
-    Cleanup
-    <input type="submit" />
-  </form>
-  <form action="Startup.php" method="post">
-    Startup
-    <input type="submit" />
-  </form>
-  <h3><a href="./InsertPage.html">Insert Tuple</a></h3>
-  <h3><a href="./DeletePage.html">Delete Tuple</a></h3>
-  <br /><br />
+    <!-- (2) -->
+    <h2>
+      How many ______ (type of facility) are available for patients for each
+      region?
+    </h2>
+    <form action="query2.php" method="post">
+      Facility Type: <input type="text" name="facility_type" /> <br />
+      <input type="submit" />
+    </form>
+    <br /><br />
 
-  <!-- (2) -->
-  <h2>
-    How many ______ (type of facility) are available for patients for each
-    region?
-  </h2>
-  <form action="query2.php" method="post">
-    Facility Type: <input type="text" name="facility_type" /> <br />
-    <input type="submit" />
-  </form>
-  <br /><br />
+    <!-- (14) -->
+    <h2>
+      What is ______ (country) allocating its resources to? (greatest to least)
+    </h2>
+    <form action="query14.php" method="post">
+      Country: <input type="text" name="country" /> <br />
+      <input type="submit" />
+    </form>
+    <br /><br />
 
-  <!-- (14) -->
-  <h2>
-    What is ______ (country) allocating its resources to? (greatest to least)
-  </h2>
-  <form action="query14.php" method="post">
-    Country: <input type="text" name="country" /> <br />
-    <input type="submit" />
-  </form>
-  <br /><br />
+    <!-- (15) -->
+    <h2>
+      What are the top ______ countries with the most suicides committed in
+      2016?
+    </h2>
+    <form action="query15.php" method="post">
+      Number: <input type="text" name="num" /> <br />
+      <input type="submit" />
+    </form>
+    <br /><br />
 
-  <!-- (15) -->
-  <h2>
-    What are the top ______ countries with the most suicides committed in
-    2016?
-  </h2>
-  <form action="query15.php" method="post">
-    Number: <input type="text" name="num" /> <br />
-    <input type="submit" />
-  </form>
-  <br /><br />
+    <!-- (10) -->
+    <h2>
+      For ______ (country), what percentage of general hospital patients were
+      rebabilitated after being diagnosed?
+    </h2>
+    <form action="query10.php" method="post">
+      Country: <input type="text" name="country" /> <br />
+      <input type="submit" />
+    </form>
+    <br /><br />
 
-  <!-- (10) -->
-  <h2>
-    For ______ (country), what percentage of general hospital patients were
-    rebabilitated after being diagnosed?
-  </h2>
-  <form action="query10.php" method="post">
-    Country: <input type="text" name="country" /> <br />
-    <input type="submit" />
-  </form>
-  <br /><br />
+    <!-- (11) -->
+    <h2>
+      What percentage of diagnoses were for PTSD, insanity, and depression in
+      mental health hospitals for ______ (country)?
+    </h2>
+    <form action="query11.php" method="post">
+      Country: <input type="text" name="country" /> <br />
+      <input type="submit" />
+    </form>
+    <br /><br />
 
-  <!-- (11) -->
-  <h2>
-    What percentage of diagnoses were for PTSD, insanity, and depression in
-    mental health hospitals for ______ (country)?
-  </h2>
-  <form action="query11.php" method="post">
-    Country: <input type="text" name="country" /> <br />
-    <input type="submit" />
-  </form>
-  <br /><br />
+    <!-- (11) -->
+    <h2>
+      What percentage of diagnoses were for PTSD, insanity, and depression in
+      mental health hospitals for ______ (country)?
+    </h2>
+    <form action="query11.php" method="post">
+      Country: <input type="text" name="country" /> <br />
+      <input type="submit" />
+    </form>
+    <br /><br />
 
-  <!-- (11) -->
-  <h2>What percentage of diagnoses were for PTSD, insanity, and depression in mental health hospitals for ______
-    (country)?</h2>
-  <form action="query11.php" method="post">
-    Country: <input type="text" name="country" /> <br />
-    <input type="submit" />
-  </form>
-  <br /><br />
+    <!-- (4) -->
+    <h2>
+      In ______ (year), how many males vs females committed suicide for each
+      country?
+    </h2>
+    <form action="query4.php" method="post">
+      Year: <input type="text" name="year" /> <br />
+      <input type="submit" />
+    </form>
+    <br /><br />
 
-  <!-- (4) -->
-  <h2>In ______ (year), how many males vs females committed suicide for each country?</h2>
-  <form action="query4.php" method="post">
-    Year: <input type="text" name="year" /> <br />
-    <input type="submit" />
-  </form>
-  <br /><br />
+    <!-- (1) -->
+    <h2>What country has the greatest number of facilities?</h2>
+    <form action="query1.php" method="post">
+      <input type="submit" />
+    </form>
+    <br /><br />
 
-  <!-- (1) -->
-  <h2>What country has the greatest number of facilities?</h2>
-  <form action="query1.php" method="post">
-    <input type="submit" />
-  </form>
-  <br /><br />
+    <!-- (12) -->
+    <h2>
+      What is the average stay for each facility with overnight capacity in
+      ______ (region)?
+    </h2>
+    <form action="query12.php" method="post">
+      Region: <input type="text" name="region" /> <br />
+      <input type="submit" />
+    </form>
+    <br /><br />
 
-  <!-- (12) -->
-  <h2>What is the average stay for each facility with overnight capacity in ______ (region)?</h2>
-  <form action="query12.php" method="post">
-    Region: <input type="text" name="region" /> <br />
-    <input type="submit" />
-  </form>
-  <br /><br />
+    <!-- (3) -->
+    <h2>
+      What country has the greatest number of psychiatrists in the mental health
+      sector in a given region?
+    </h2>
+    <form action="query3.php" method="post">
+      Region: <input type="text" name="region" /> <br />
+      <input type="submit" />
+    </form>
+    <br /><br />
 
-  <!-- (3) -->
-  <h2>What country has the greatest number of psychiatrists in the mental health sector in a given region?</h2>
-  <form action="query3.php" method="post">
-    Region: <input type="text" name="region" /> <br />
-    <input type="submit" />
-  </form>
-  <br /><br />
-
-  <!-- (11) -->
-  <h2>What are the top ______ countries with the most suicides committed in 2016?</h2>
-  <form action="query15.php" method="post">
-    number: <input type="text" name="num" /> <br />
-    <input type="submit" />
-  </form>
-</body>
-
+    <!-- (11) -->
+    <h2>
+      What are the top ______ countries with the most suicides committed in
+      2016?
+    </h2>
+    <form action="query15.php" method="post">
+      number: <input type="text" name="num" /> <br />
+      <input type="submit" />
+    </form>
+  </body>
 </html>
