@@ -133,3 +133,145 @@ BEGIN
 END; //
 
 DELIMITER ;
+
+DELIMITER //
+
+DROP FUNCTION IF EXISTS CheckYear //
+
+CREATE FUNCTION CheckYear(day int)
+RETURNS INTEGER
+BEGIN
+      RETURN (SELECT COUNT(year) FROM Suicide_Rates WHERE year = day);
+END; //
+
+DROP PROCEDURE IF EXISTS ShowMaleFemaleSuicideRates //
+
+CREATE PROCEDURE ShowMaleFemaleSuicideRates(IN day int)
+BEGIN
+    IF CheckYear(day) != 0 THEN
+        WITH maleSuicide AS (
+            SELECT Country.name AS country,
+                Country.population / 100000 * Suicide_Rates.age_standardized_suicide_rates AS number_of_male_suicides
+            FROM Suicide_Rates
+                JOIN Country ON Suicide_Rates.country = Country.name
+            WHERE Suicide_Rates.year = day
+                AND Suicide_Rates.sex = "male"
+        ),
+        femaleSuicide AS (
+            SELECT Country.name AS country,
+                Country.population / 100000 * Suicide_Rates.age_standardized_suicide_rates AS number_of_female_suicides
+            FROM Suicide_Rates
+                JOIN Country ON Suicide_Rates.country = Country.name
+            WHERE Suicide_Rates.year = day
+                AND Suicide_Rates.sex = "female"
+        )
+        SELECT maleSuicide.country AS country,
+            number_of_male_suicides,
+            number_of_female_suicides
+        FROM maleSuicide
+            JOIN femaleSuicide ON maleSuicide.country = femaleSuicide.country;
+    ELSE
+       SELECT NULL as Error;
+    END IF;
+END; //
+
+DELIMITER ;
+
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS ShowCountryGreatestFacilities //
+
+CREATE PROCEDURE ShowCountryGreatestFacilities()
+BEGIN
+    WITH numFac AS (
+        SELECT country,
+            SUM(population / 100 * unit_count) as total
+        FROM Facility
+            JOIN Country on Country.name = Facility.country
+        GROUP BY Facility.country
+    ),
+    greatestAmount AS (
+        SELECT MAX(total) as greatest_amount
+        FROM numFac
+    )
+    SELECT country
+    FROM numFac,
+            greatestAmount
+    WHERE total = greatest_amount;
+END; //
+
+DELIMITER ;
+
+DELIMITER //
+
+DROP FUNCTION IF EXISTS CheckRegion //
+
+CREATE FUNCTION CheckRegion(reg VARCHAR(50))
+RETURNS INTEGER
+BEGIN
+      RETURN (SELECT COUNT(region) FROM Country WHERE region = reg);
+END; //
+DROP PROCEDURE IF EXISTS ShowAverageStayRegion//
+
+CREATE PROCEDURE ShowAverageStayRegion(IN reg varchar(50))
+BEGIN
+   IF CheckRegion(reg) != 0 THEN
+        WITH mentalHealthUnitAvgStay AS (
+            SELECT region,
+                AVG(avg_stay) AS mental_health_units_avg_stay
+            FROM Country
+                JOIN Facility ON Country.name = Facility.country
+            WHERE Facility.facility_type = "mental health unit"
+            GROUP BY region
+        ),
+        mentalHospitalAvgStay AS (
+            SELECT region,
+                AVG(avg_stay) AS mental_hospital_avg_stay
+            FROM Country
+                JOIN Facility ON Country.name = Facility.country
+            WHERE Facility.facility_type = "mental hospital"
+            GROUP BY region
+        )
+        SELECT Country.region,
+            mental_health_units_avg_stay,
+            mental_hospital_avg_stay
+        FROM Country
+            JOIN mentalHealthUnitAvgStay ON Country.region = mentalHealthUnitAvgStay.region
+            JOIN mentalHospitalAvgStay ON Country.region = mentalHospitalAvgStay.region
+        WHERE Country.region = reg
+        GROUP BY region;
+   ELSE
+       SELECT NULL as Error;
+   END IF;
+END; //
+
+DELIMITER ;
+
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS ShowMaxPsychiatrists//
+
+CREATE PROCEDURE ShowMaxPsychiatrists(IN reg varchar(50))
+BEGIN
+   IF CheckRegion(reg) != 0 THEN
+        WITH psychCount AS (
+            SELECT name, region,
+                SUM(population / 100 * psychiatrist_count) as psych_count
+            FROM Country
+            WHERE region = reg
+            GROUP BY name
+        ),
+        greatestPsych AS (
+            SELECT MAX(psych_count) as greatest_psych
+            FROM psychCount
+        )
+        SELECT name, region
+        FROM psychCount,
+            greatestPsych
+        WHERE psych_count = greatest_psych;
+   ELSE
+       SELECT NULL as Error;
+   END IF;
+END; //
+
+DELIMITER ;
