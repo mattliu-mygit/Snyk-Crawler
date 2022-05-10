@@ -5,7 +5,7 @@
   <?php
     include "open.php";
     try {
-      $sql = file_get_contents('/startup.sql');
+      $sql = file_get_contents('startup.sql');
       // echo $sql;
       // echo $sql;
       $conn->multi_query($sql);
