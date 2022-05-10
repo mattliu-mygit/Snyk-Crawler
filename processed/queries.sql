@@ -75,18 +75,19 @@ WHERE cost = (
     SELECT MAX(cost)
     FROM AverageCost
   );
--- (6). What is the total patient count for all facilities for each year of each country
-SELECT Facility.country,
-  Facility.year,
-  SUM(Patient_Ledger.patient_count) * 10000 as count
+-- (6). What countries have total patient count for all facilities below ______ (total patient count)?
+ WITH totalPatients AS (
+ SELECT Facility.country AS country,
+  SUM(Patient_Ledger.patient_count) * 10000 AS count
 FROM Facility
   JOIN Patient_Ledger on Facility.year = Patient_Ledger.year
   AND Facility.country = Patient_Ledger.country
   AND Facility.facility_type = Patient_Ledger.facility_type
 GROUP BY Facility.year,
-  Facility.country
-ORDER BY Facility.year,
-  Facility.country;
+  Facility.country)
+  SELECT country, count
+  FROM totalPatients
+  WHERE count < 400000;
 -- (7). What type of facility do most people go to for each country
 SELECT Facility.country,
   MAX(Patient_Ledger.patient_count) as count,

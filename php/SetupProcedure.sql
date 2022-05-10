@@ -300,3 +300,118 @@ BEGIN
 END; //
 
 DELIMITER ;
+
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS ShowFacilityLowestSuicide//
+
+CREATE PROCEDURE ShowFacilityLowestSuicide()
+BEGIN
+    WITH FacilityCount as (
+    SELECT name,
+        MAX(Facility.cost) as max_cost,
+        facility_type
+    FROM Country
+        JOIN Facility ON Country.name = Facility.country
+    GROUP BY name
+    ),
+    AverageSuicide as (
+    SELECT country,
+        AVG(age_standardized_suicide_rates) as suicide_rates_avg
+    FROM Suicide_Rates
+    WHERE sex = 'Both sexes'
+    GROUP BY country
+    ),
+    MinRates as (
+    SELECT facility_type,
+        MIN(suicide_rates_avg) as min_rate
+    FROM AverageSuicide
+        JOIN FacilityCount ON name = country
+    GROUP BY facility_type
+    )
+    SELECT facility_type,
+        MIN(min_rate) AS lowest_suicide_rate
+    FROM MinRates;
+END; //
+
+DELIMITER ;
+
+DELIMITER //
+
+DROP FUNCTION IF EXISTS CheckPatientCount //
+
+CREATE FUNCTION CheckPatientCount(num int)
+RETURNS INTEGER
+BEGIN
+    RETURN (WITH totalPatients AS (
+    SELECT Facility.country AS country,
+        SUM(Patient_Ledger.patient_count) * 10000 AS checkCount
+    FROM Facility
+        JOIN Patient_Ledger on Facility.year = Patient_Ledger.year
+        AND Facility.country = Patient_Ledger.country
+        AND Facility.facility_type = Patient_Ledger.facility_type
+    GROUP BY Facility.year,
+        Facility.country) SELECT COUNT(checkCount) FROM totalPatients WHERE checkCount < num);
+END; //
+DROP PROCEDURE IF EXISTS ShowTotalPatientsFacility //
+
+CREATE PROCEDURE ShowTotalPatientsFacility(IN num int)
+BEGIN
+    IF CheckPatientCount(num) != 0 THEN
+        WITH totalPatients AS (
+        SELECT Facility.country AS country,
+            SUM(Patient_Ledger.patient_count) * 10000 AS count
+        FROM Facility
+            JOIN Patient_Ledger on Facility.year = Patient_Ledger.year
+            AND Facility.country = Patient_Ledger.country
+            AND Facility.facility_type = Patient_Ledger.facility_type
+        GROUP BY Facility.year,
+            Facility.country)
+        SELECT country, count
+        FROM totalPatients
+        WHERE count < num;
+    ELSE
+       SELECT NULL as Error;
+   END IF;
+END; //
+
+DELIMITER ;
+
+DELIMITER //
+
+DROP FUNCTION IF EXISTS CheckAllocation //
+
+CREATE FUNCTION CheckAllocation(num int)
+RETURNS INTEGER
+BEGIN
+    RETURN (WITH totalAllocation AS (
+            SELECT General_Hospital.country AS country,
+            (
+                General_Hospital.mental_health_allocation + Outpatient.mental_health_allocation
+            ) * 10000000 AS mental_health_allocation
+            FROM Outpatient
+                JOIN General_Hospital ON General_Hospital.country = Outpatient.country
+            GROUP BY Outpatient.country) SELECT COUNT(mental_health_allocation) FROM totalAllocation WHERE mental_health_allocation > num);
+END; //
+DROP PROCEDURE IF EXISTS ShowTotalAllocation //
+
+CREATE PROCEDURE ShowTotalAllocation(IN num int)
+BEGIN
+    IF CheckAllocation(num) != 0 THEN
+        WITH totalAllocation AS (
+        SELECT General_Hospital.country AS country,
+        (
+            General_Hospital.mental_health_allocation + Outpatient.mental_health_allocation
+        ) * 10000000 AS mental_health_allocation
+        FROM Outpatient
+            JOIN General_Hospital ON General_Hospital.country = Outpatient.country
+        GROUP BY Outpatient.country) 
+        SELECT country, mental_health_allocation
+        FROM totalAllocation
+        WHERE mental_health_allocation > num;
+    ELSE
+       SELECT NULL as Error;
+   END IF;
+END; //
+
+DELIMITER ;
