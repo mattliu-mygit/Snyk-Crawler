@@ -433,3 +433,23 @@ BEGIN
 END; //
 
 DELIMITER ;
+
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS ShowMostFreq//
+
+CREATE PROCEDURE ShowMostFreq()
+BEGIN
+    SELECT Facility.country,
+        MAX(Patient_Ledger.patient_count) as count,
+        Facility.facility_type as facility
+    FROM Facility
+        JOIN Patient_Ledger on Facility.year = Patient_Ledger.year
+        AND Facility.country = Patient_Ledger.country
+        AND Facility.facility_type = Patient_Ledger.facility_type
+    GROUP BY Facility.country,
+        Facility.year
+    ORDER BY Facility.country;
+END; //
+
+DELIMITER ;
