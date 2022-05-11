@@ -12,7 +12,8 @@
          echo $year;
          echo " for each country";
          echo "</h2>";
-	$dataPoints = array();
+	$dataPoints1 = array();
+	$dataPoints2 = array();
 
 	if (!empty($year)) {
       if ($result = $conn->query("CALL ShowMaleFemaleSuicideRates('".$year."');")) {
@@ -21,10 +22,11 @@
                echo "ERROR: Year " .$year. " not found.";
                return;
             }
-            array_push($dataPoints, array(array ( "label" => $row["country"], "y" => $row["number_of_male_suicides"]), array ( "label" => $row["country"], "y" => $row["number_of_female_suicides"])));
+            array_push($dataPoints1, array ( "label" => $row["country"], "y" => $row["number_of_male_suicides"]));
+            array_push($dataPoints2, array ( "label" => $row["country"], "y" => $row["number_of_female_suicides"]));
+						
 						// print_r($dataPoints);
-         }
-        
+        }
       } else {
         echo "Call to ShowMaleFemaleSuicideRates failed<br>";
       }
@@ -40,14 +42,6 @@
 <head>  
 <script>
 window.onload = function () {
-	$transformed = new Array();
-	$dataPC = $dataPoints;
-	for (var i = 0; i < $dataPC.length; i++) {
-		array_push($transformed, {       
-			type: "stackedColumn",  
-			dataPoints: <?php echo json_encode($dataPC[i], JSON_NUMERIC_CHECK); ?>
-		});
-	}
 	
 	// for (var i = 0; i < $dataPoints.length; i++) {
 	// 	echo $transformed[i]["type"];
@@ -67,7 +61,13 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		labelAngle: 280,
 		title: "Country"
 	},
-	data: transformed
+	data: [{
+			type: "stackedColumn",
+			dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
+		}, {
+			type: "stackedColumn",
+			dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+		}]
 });
 chart.render();
 
