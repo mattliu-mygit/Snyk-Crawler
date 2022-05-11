@@ -1,0 +1,190 @@
+name,region,psychiatrist_count,population
+Marshall Islands,Western Pacific,0,40490
+Burundi,Africa,0.01,5891637
+Central African Republic,Africa,0.022,2992822
+Sierra Leone,Africa,0.041,4430348
+Eswatini,Africa,0.076,773928
+Ethiopia,Africa,0.076,55662437
+Comoros,Africa,0.13,450505
+Iraq,Eastern Mediterranean,0.34,19728968
+Sri Lanka,South-East Asia,0.52,16624192
+Equatorial Guinea,Africa,0.68,557346
+Nicaragua,Americas,0.69,4155099
+The former Yugoslav Republic of Macedonia,Europe,14.43,529239297
+Canada,Americas,14.68,27691087
+Iran (Islamic Republic of),Eastern Mediterranean,2.02,180110188
+Mauritius,Africa,2.38,1043499
+Maldives,South-East Asia,2.39,243951
+France,Europe,20.91,58160420
+Finland,Europe,23.59,4994004
+Bahrain,Eastern Mediterranean,5.47,636994
+Saint Kitts and Nevis,Americas,5.53,993557851
+Serbia,Europe,8.64,7260192
+Chad,Africa,0.007,7346409
+Niger,Africa,0.014,9974153
+Guinea,Africa,0.025,6986892
+South Sudan,Africa,0.025,6003377
+Mali,Africa,0.029,10021321
+Burkina Faso,Africa,0.039,10195237
+Liberia,Africa,0.044,2496916
+Mozambique,Africa,0.046,15708012
+Togo,Africa,0.054,4125723
+Zambia,Africa,0.056,8775117
+Angola,Africa,0.057,14135453
+Ghana,Africa,0.058,16250413
+Madagascar,Africa,0.058,13334116
+Rwanda,Africa,0.06,6835686
+Haiti,Americas,0.075,7232122
+Congo,Africa,0.08,744036010
+Timor-Leste,South-East Asia,0.081,803097
+Uganda,Africa,0.082,20156064
+Zimbabwe,Africa,0.095,9491676
+Gambia,Africa,0.1,665498723
+Bangladesh,South-East Asia,0.13,104627709
+Côte d’Ivoire,Africa,0.13,498010327
+Kenya,Africa,0.18,26020168
+Senegal,Africa,0.2,8287772
+Yemen,Eastern Mediterranean,0.2,52452188
+Mexico,Americas,0.21,83228611
+Fiji,Western Pacific,0.22,700822
+Afghanistan,Eastern Mediterranean,0.23,18699394
+Gabon,Africa,0.26,1079126
+India,South-East Asia,0.29,888774544
+Indonesia,South-East Asia,0.31,179596807
+Nepal,South-East Asia,0.36,19338913
+Namibia,Africa,0.37,1463742
+Syrian Arab Republic,Eastern Mediterranean,0.37,12526826
+Myanmar,South-East Asia,0.38,39692804
+Vanuatu,Western Pacific,0.38,159162
+Cambodia,Western Pacific,0.39,10141187
+Ecuador,Americas,0.46,10495048
+Guatemala,Americas,0.49,9621183
+Bhutan,South-East Asia,0.51,498786
+Sao Tome and Principe,Africa,0.51,124784
+Philippines,Western Pacific,0.52,64179105
+Saint Lucia,Americas,0.56,117996981
+Thailand,South-East Asia,0.72,53222680
+Morocco,Eastern Mediterranean,0.84,24434340
+El Salvador,Americas,0.89,5038889
+Guyana,Americas,0.91,736733
+Antigua and Barbuda,Americas,1,71373
+Malaysia,Western Pacific,1.05,19018116
+Jordan,Eastern Mediterranean,1.12,4301275
+Bolivia (Plurinational State of),Americas,1.13,595918005
+Brunei Darussalam,Western Pacific,1.2,260731
+Suriname,Americas,1.27,427526
+Saudi Arabia,Eastern Mediterranean,1.32,16604690
+Belize,Americas,1.39,210786
+Tajikistan,Europe,1.39,5262681
+Albania,Europe,1.47,2710419
+South Africa,Africa,1.52,36990791
+Samoa,Western Pacific,1.55,162994
+Egypt,Eastern Mediterranean,1.6,687740947
+Turkey,Europe,1.64,54071778
+United Arab Emirates,Eastern Mediterranean,1.65,3200561
+Kyrgyzstan,Europe,1.69,280566624
+Colombia,Americas,1.84,33266206
+Grenada,Americas,1.87,99376
+United States of America,Americas,10.54,233377432
+Hungary,Europe,11.08,10258068
+Croatia,Europe,11.1,4424493
+Japan,Western Pacific,11.87,118165923
+Slovenia,Europe,11.95,1911095
+Belarus,Europe,13.5,9524759
+Uruguay,Americas,14.13,3083954
+Estonia,Europe,16.19,1394403
+Lithuania,Europe,18.45,3269047
+Seychelles,Africa,2.13,70828
+Dominican Republic,Americas,2.28,7112703
+Uzbekistan,Europe,2.61,20446020
+Qatar,Eastern Mediterranean,2.71,782830
+Tonga,Western Pacific,2.82,92561
+Peru,Americas,2.95,21633772
+Sweden,Europe,20.86,8668930
+Argentina,Americas,21.71,32515550
+Poland,Europe,24.18,36141165
+New Zealand,Western Pacific,28.54,3552486
+Brazil,Americas,3.16,146302358
+Azerbaijan,Europe,3.45,7105889
+Armenia,Europe,3.84,2913209
+Costa Rica,Americas,3.93,3184881
+Monaco,Europe,31.33,29844
+Mongolia,Western Pacific,4.03,2059915
+Panama,Americas,4.03,2558537
+Singapore,Western Pacific,4.19,3392631
+Norway,Europe,48.04,4345527
+Romania,Europe,5.66,21120391
+Cook Islands,Western Pacific,5.73,485923647
+Republic of Korea,Western Pacific,5.79,7946404
+Greece,Europe,5.8,9998936
+Georgia,Europe,6.71,4173207
+Ukraine,Europe,6.93,47964201
+Chile,Americas,6.97,13411429
+Bulgaria,Europe,7.2,8167673
+Montenegro,Europe,8.28,582672
+Cuba,Americas,9.06,10133546
+Israel,Europe,9.87,5191151
+United Republic of Tanzania,Africa,0.056,722741935
+Sudan,Eastern Mediterranean,0.08,22076497
+Jamaica,Americas,1.15,2374212
+Lebanon,Eastern Mediterranean,1.21,3588813
+Oman,Eastern Mediterranean,1.74,1994925
+Czechia,Europe,12.36,917682685
+Germany,Europe,13.2,79611396
+Australia,Western Pacific,13.53,17244215
+Luxembourg,Europe,17.82,417386
+China,Western Pacific,2.2,1094239415
+Netherlands,Europe,20.87,14854819
+Republic of Moldova,Europe,4.55,299415126
+Switzerland,Europe,43.96,6888413
+Italy,Europe,5.98,56457738
+Bosnia and Herzegovina,Europe,8.03,3830598
+Russian Federation,Europe,8.48,139875793
+Spain,Europe,9.69,39358597
+Latvia,Europe,9.99,2330660
+Honduras,Americas,0.66,5363029
+Mauritania,Africa,0.072,2261219
+Belgium,Europe,20.06,10168513
+Somalia,Eastern Mediterranean,4.04,1431940
+Tunisia,Eastern Mediterranean,4.49,6714621
+Trinidad and Tobago,Americas,3.33,4171930
+Botswana,Africa,2.10,6323819
+Saint Vincent and the Grenadines,Americas,3.67,1405372
+Pakistan,Eastern Mediterranean,4.86,2610841
+Eritrea,Africa,4.68,8679656
+Portugal,Europe,4.06,2535607
+Paraguay,Americas,0.75,9172442
+Libya,Eastern Mediterranean,2.98,2398672
+Viet Nam,Western Pacific,0.50,9275600
+Algeria,Africa,0.19,7471116
+Guinea-Bissau,Africa,2.68,5246407
+Iceland,Europe,2.17,9016392
+Ireland,Europe,3.40,4609665
+Cyprus,Europe,3.18,3797818
+Austria,Europe,1.17,6835007
+Bahamas,Americas,2.86,7501133
+Barbados,Americas,3.12,3125695
+Kiribati,Western Pacific,3.77,1303246
+Niue,Western Pacific,1.04,6641393
+Nauru,Western Pacific,1.37,1925261
+Cabo Verde,Africa,3.78,9057838
+Venezuela (Bolivarian Republic of),Americas,2.54,4907572
+Kuwait,Eastern Mediterranean,2.26,5850897
+Papua New Guinea,Western Pacific,1.52,7530779
+Nigeria,Africa,2.67,2538174
+United Kingdom of Great Britain and Northern Ireland,Europe,4.12,62478
+Malawi,Africa,1.28,6749281
+Democratic People's Republic of Korea,South-East Asia,4.65,9995093
+Denmark,Europe,2.18,4389746
+Djibouti,Eastern Mediterranean,4.94,7267060
+Democratic Republic of the Congo,Africa,4.33,435522
+Benin,Africa,2.25,2198157
+Micronesia (Federated States of),Western Pacific,2.68,9211198
+Lesotho,Africa,4.16,8042772
+Cameroon,Africa,3.67,5409799
+Slovakia,Europe,0.03,7926599
+Solomon Islands,Western Pacific,4.79,881453
+Kazakhstan,Europe,1.61,2938983
+Malta,Europe,2.65,2381139
+Turkmenistan,Europe,2.63,8808232
+Lao People's Democratic Republic,Western Pacific,2.21,2570777
