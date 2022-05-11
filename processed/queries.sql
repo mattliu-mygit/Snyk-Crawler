@@ -60,7 +60,7 @@ FROM maleSuicide
   JOIN femaleSuicide ON maleSuicide.country = femaleSuicide.country;
 -- (5). What is the average amount patients spent in a facility for each country?
 WITH AverageCost AS (
-  SELECT Facility.year,
+  SELECT
     Facility.country,
     AVG(Patient_Ledger.cost) * 100 as cost
   FROM Facility
@@ -91,7 +91,7 @@ GROUP BY Facility.year,
 -- (7). What type of facility do most people go to for each country
 SELECT Facility.country,
   MAX(Patient_Ledger.patient_count) as count,
-  Facility.facility_type
+  Facility.facility_type AS facility
 FROM Facility
   JOIN Patient_Ledger on Facility.year = Patient_Ledger.year
   AND Facility.country = Patient_Ledger.country

@@ -22,8 +22,8 @@
                return;
             }
             array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["number_of_male_suicides"]));
-			array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["number_of_female_suicides"]));
-			print_r($dataPoints);
+						array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["number_of_female_suicides"]));
+						// print_r($dataPoints);
          }
         
       } else {
