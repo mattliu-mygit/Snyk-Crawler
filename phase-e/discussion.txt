@@ -2,6 +2,7 @@ Karen He - khe8
 Matthew Liu - mliu78
 
 - Modifications: Since phase A, we've gone back and editted out questions based on feedback we recieved. We've also modified them slightly based on our own discretion in order to make them more complex and easier to visualize.
+We also made some modifications to our questions to accept input from the user because most/all of our questions did not accept input previously. This means we also adjusted some of our queries from Phase D.
 
 - Process - not many updates were made since phase C. It is as listed below.
 Producing table data:
@@ -35,8 +36,9 @@ General Hospital: https://www.who.int/data/gho/data/indicators/indicator-details
 Day Treatment: https://www.who.int/data/gho/data/indicators/indicator-details/GHO/mental-health-day-treatment-facilities-(per-100-000) 
 Mental Hospital: https://www.who.int/data/gho/data/indicators/indicator-details/GHO/mental-hospitals-(per-100-000) 
 
-- Successes: We were able to use multiple types of graphs available on CanvasJS to display our information (standard bar graphs, combined bar graphs, etc.). Although not really anything to brag about, this is the first time we've used PHP and SQL, so being able to execute and display these queries was a success for us.
+- Successes: We were able to use multiple types of graphs available on CanvasJS to display our information (standard bar graphs, pie chart, combined bar graphs, etc.). Although not really anything to brag about, this is the first time we've used PHP and SQL, so being able to execute and display these queries was a success for us.
+Being able to write procedures and connect html, php, and sql together in order to query and visualize our data was a success for us. 
 
 - Known Issues: none
 
-- Extensions: Finding additional sources of information to display, as there are so many more aspects to mental health that can be explored, such as affects on life at school or work, or what factors contribute to worse mental health. If we had more time, we could also find better ways to visualize the data using CanvasJS, or apply ML algorithms to run unsupervised learning to find patterns in mental health.
+- Extensions: Finding additional sources of information to display, as there are so many more aspects to mental health that can be explored, such as affects on life at school or work, or what factors contribute to worse mental health. If we had more time, we could also find better ways to visualize the data using CanvasJS, or apply ML algorithms to run unsupervised learning to find patterns in mental health. Something else that we could do is making the landing page more appealing than just a drop down with menu items.
