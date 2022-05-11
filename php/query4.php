@@ -21,8 +21,7 @@
                echo "ERROR: Year " .$year. " not found.";
                return;
             }
-            array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["number_of_male_suicides"]));
-						array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["number_of_female_suicides"]));
+            array_push($dataPoints, array(array ( "label" => $row["country"], "y" => $row["number_of_male_suicides"]), array ( "label" => $row["country"], "y" => $row["number_of_female_suicides"])));
 						// print_r($dataPoints);
          }
         
@@ -41,6 +40,17 @@
 <head>  
 <script>
 window.onload = function () {
+	$transformed = new Array();
+	for (var i = 0; i < $dataPoints.length; i++) {
+		array_push($transformed, {       
+			type: "stackedColumn",  
+			dataPoints: <?php echo json_encode($dataPoints[i], JSON_NUMERIC_CHECK); ?>
+		});
+	}
+	
+	// for (var i = 0; i < $dataPoints.length; i++) {
+	// 	echo $transformed[i]["type"];
+	// }
 
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
@@ -56,10 +66,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		labelAngle: 280,
 		title: "Country"
 	},
-	data: [{        
-		type: "stackedColumn",  
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	}]
+	data: transformed
 });
 chart.render();
 
