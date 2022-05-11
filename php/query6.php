@@ -5,8 +5,9 @@
 	//open a connection to dbase server 
 	include 'open.php';
 
-	// collect the posted value in a variable called $item
+	if($stmt = $conn->prepare ("CALL ShowTotalPatientsFacility(?)")) {
 	$num = $_POST['num'];
+	$stmt->bind_param('i', $num);
          echo "<h2>";
          echo "total patient count for countries with less than ";
          echo $num;
@@ -15,7 +16,8 @@
 	$dataPoints = array();
 
 	if (!empty($num)) {
-      if ($result = $conn->query("CALL ShowTotalPatientsFacility('".$num."');")) {
+      if ($stmt->execute()) {
+		$result = $stmt->get_result();
          foreach($result as $row) {
             if ($row["Error"] == NULL and count($row) == 1) {
                echo "ERROR: There are no countries with a total patient count for all facilities below " .$num."";
@@ -23,12 +25,14 @@
             }
             array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["count"]));
          }
-        
+		 $result->free_result();
       } else {
         echo "Call to ShowTotalPatientsFacility failed<br>";
       }
+	  $stmt->close();
 	} else {
 	   echo "not set";
+	}
 	}
 	$conn->close();
 

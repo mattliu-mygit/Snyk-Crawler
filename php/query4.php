@@ -5,8 +5,9 @@
 	//open a connection to dbase server 
 	include 'open.php';
 
-	// collect the posted value in a variable called $item
+	if($stmt = $conn->prepare ("CALL ShowMaleFemaleSuicideRates(?)")) {
 	$year = $_POST['year'];
+	$stmt->bind_param('i', $year);
          echo "<h2>";
          echo "number of male and female suicide in ";
          echo $year;
@@ -15,7 +16,8 @@
 	$dataPoints = array();
 
 	if (!empty($year)) {
-      if ($result = $conn->query("CALL ShowMaleFemaleSuicideRates('".$year."');")) {
+      if ($stmt->execute()) {
+		 $result = $stmt->get_result();
          foreach($result as $row) {
             if ($row["Error"] == NULL and count($row) == 1) {
                echo "ERROR: Year " .$year. " not found.";
@@ -25,12 +27,14 @@
 			array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["number_of_female_suicides"]));
 			print_r($dataPoints);
          }
-        
+		 $result->free_result();
       } else {
         echo "Call to ShowMaleFemaleSuicideRates failed<br>";
       }
+	  $stmt->close();
 	} else {
 	   echo "not set";
+	}
 	}
 	$conn->close();
 
