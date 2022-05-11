@@ -1,1 +1,0 @@
-LOAD DATA LOCAL INFILE './processed/facility.csv' INTO TABLE Facility FIELDS TERMINATED BY ',';
