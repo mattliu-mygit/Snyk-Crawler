@@ -5,8 +5,10 @@
 	//open a connection to dbase server 
 	include 'open.php';
 
-	// collect the posted value in a variable called $item
+	
+	if($stmt = $conn->prepare ("CALL ShowFacilityAvailability(?)")) {
 	$fac = $_POST['facility_type'];
+	$stmt->bind_param('s', $fac);
          echo "<h2>";
          echo $fac;
          echo " availability per region";
@@ -14,22 +16,26 @@
 	$dataPoints = array();
 
 	if (!empty($fac)) {
-      if ($result = $conn->query("CALL ShowFacilityAvailability('".$fac."');")) {
+      if ($stmt->execute()) {
+		 $result = $stmt->get_result();
          foreach($result as $row) {
             if ($row["Error"] == NULL and count($row) == 1) {
                echo "ERROR: Facility type " .$fac. " not found.";
                return;
             }
             array_push($dataPoints, array ( "label" => $row["region"], "y" => $row["available_units"]));
-         }
-        
+          }
+		  $result->free_result();
       } else {
         echo "Call to ShowFacilityAvailability failed<br>";
       }
+	  $stmt->close();
 	} else {
 	   echo "not set";
 	}
+	}
 	$conn->close();
+	
 
 ?>
 </body>

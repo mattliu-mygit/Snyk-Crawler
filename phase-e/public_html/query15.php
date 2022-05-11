@@ -5,8 +5,9 @@
 	//open a connection to dbase server 
 	include 'open.php';
 
-	// collect the posted value in a variable called $item
+	if($stmt = $conn->prepare ("CALL ShowTopCountrySuicides(?)")) {
 	$num = $_POST['num'];
+	$stmt->bind_param('i', $num);
          echo "<h2>";
          echo "top ";
          echo $num;
@@ -15,7 +16,8 @@
 	$dataPoints = array();
 
 	if (!empty($num)) {
-      if ($result = $conn->query("CALL ShowTopCountrySuicides('".$num."');")) {
+      if ($stmt->execute()) {
+		$result = $stmt->get_result();
          foreach($result as $row) {
             if ($row["Error"] == NULL and count($row) == 1) {
                echo "ERROR: Number " .$num. " is invalid.";
@@ -23,12 +25,14 @@
             }
             array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["average_number_of_suicides"]));
          }
-        
+		 $result->free_result();
       } else {
         echo "Call to ShowTopCountrySuicides failed<br>";
       }
+	  $stmt->close();
 	} else {
 	   echo "not set";
+	}
 	}
 	$conn->close();
 

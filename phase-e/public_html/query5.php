@@ -6,19 +6,22 @@
 	include 'open.php';
 
 	// collect the posted value in a variable called $item
+    if ($stmt = $conn->prepare("CALL ShowAverageSpending()")) {
          echo "<h2>";
          echo "average patient spending on mental health for each country";
          echo "</h2>";
 	$dataPoints = array();
-        if ($result = $conn->query("CALL ShowAverageSpending();")) {
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
            foreach($result as $row) {
               array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["cost"]));
            }
-          
+           $result->free_result();
         } else {
           echo "Call to ShowAverageSpending failed<br>";
         }
-      
+        $stmt->close();
+    }
       $conn->close();
   
   ?>

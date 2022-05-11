@@ -4,13 +4,14 @@
 
 	//open a connection to dbase server 
 	include 'open.php';
-
+   if($stmt = $conn->prepare ("CALL ShowRegionHighestSuicide()")) {
 	    echo "<h2>";
         echo "region with the highest suicide rate";
         echo "</h2>";
 
 	
-      if ($result = $conn->query("CALL ShowRegionHighestSuicide();")) {
+      if ($stmt->execute()) {
+         $result = $stmt->get_result();
          foreach($result as $row) {
             echo "<h3>";
             echo $row["region"];
@@ -19,11 +20,12 @@
             echo " per 100,000";
             echo "</h3>";
          }
-        
+         $result->free_result();
       } else {
         echo "Call to ShowRegionHighestSuicide failed<br>";
       }
-
+      $stmt->close();
+   }
 	$conn->close();
 
 ?>

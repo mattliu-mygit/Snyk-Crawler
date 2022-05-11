@@ -5,8 +5,9 @@
 	//open a connection to dbase server 
 	include 'open.php';
 
-	// collect the posted value in a variable called $item
+	if($stmt = $conn->prepare ("CALL ShowTotalAllocation(?)")) {
 	$num = $_POST['num'];
+    $stmt->bind_param('i', $num);
          echo "<h2>";
          echo "total mental health allocation for countries with allocations greater than ";
          echo $num;
@@ -15,7 +16,8 @@
 	$dataPoints = array();
 
 	if (!empty($num)) {
-        if ($result = $conn->query("CALL ShowTotalAllocation('".$num."');")) {
+        if ($stmt->execute()) {
+        $result = $stmt->get_result();
            foreach($result as $row) {
               if ($row["Error"] == NULL and count($row) == 1) {
                  echo "ERROR: There are no countries with a total mental health allocation above " .$num."";
@@ -23,13 +25,15 @@
               }
               array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["mental_health_allocation"]));
            }
-          
+           $result->free_result();
         } else {
           echo "Call to ShowTotalAllocation failed<br>";
         }
+        $stmt->close();
       } else {
          echo "not set";
       }
+    }
       $conn->close();
   
   ?>
