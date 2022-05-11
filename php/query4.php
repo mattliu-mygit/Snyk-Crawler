@@ -41,10 +41,11 @@
 <script>
 window.onload = function () {
 	$transformed = new Array();
-	for (var i = 0; i < $dataPoints.length; i++) {
+	$dataPC = $dataPoints;
+	for (var i = 0; i < $dataPC.length; i++) {
 		array_push($transformed, {       
 			type: "stackedColumn",  
-			dataPoints: <?php echo json_encode($dataPoints[i], JSON_NUMERIC_CHECK); ?>
+			dataPoints: <?php echo json_encode($dataPC[i], JSON_NUMERIC_CHECK); ?>
 		});
 	}
 	
