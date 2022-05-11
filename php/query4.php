@@ -13,7 +13,8 @@
          echo $year;
          echo " for each country";
          echo "</h2>";
-	$dataPoints = array();
+	$dataPoints1 = array();
+	$dataPoints2 = array();
 
 	if (!empty($year)) {
       if ($stmt->execute()) {
@@ -25,7 +26,7 @@
             }
             array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["number_of_male_suicides"]));
 			array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["number_of_female_suicides"]));
-			print_r($dataPoints);
+			
          }
 		 $result->free_result();
       } else {
@@ -45,6 +46,10 @@
 <head>  
 <script>
 window.onload = function () {
+	
+	// for (var i = 0; i < $dataPoints.length; i++) {
+	// 	echo $transformed[i]["type"];
+	// }
 
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
@@ -57,13 +62,16 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
    axisX: {
 	   	interval: 1,
-		labelAngle: 280,
+		labelAngle: 290,
 		title: "Country"
 	},
-	data: [{        
-		type: "stackedColumn",  
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	}]
+	data: [{
+			type: "stackedColumn",
+			dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
+		}, {
+			type: "stackedColumn",
+			dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+		}]
 });
 chart.render();
 
