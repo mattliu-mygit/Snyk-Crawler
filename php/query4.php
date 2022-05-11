@@ -58,7 +58,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
    axisX: {
 	   	interval: 1,
-		labelAngle: 280,
+		labelAngle: 290,
 		title: "Country"
 	},
 	data: [{
