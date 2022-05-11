@@ -5,8 +5,9 @@
 	//open a connection to dbase server 
 	include 'open.php';
 
-	// collect the posted value in a variable called $item
+	if($stmt = $conn->prepare ("CALL ShowCountryResourceAllocation(?)")) {
 	$country = $_POST['country'];
+	$stmt->bind_param('s', $country);
          echo "<h2>";
          echo "resource allocation from greatest to least for ";
          echo $country;
@@ -14,7 +15,8 @@
 	$dataPoints = array();
 
 	if (!empty($country)) {
-      if ($result = $conn->query("CALL ShowCountryResourceAllocation('".$country."');")) {
+      if ($stmt->execute()) {
+		$result = $stmt->get_result();
          foreach($result as $row) {
             if ($row["Error"] == NULL and count($row) == 1) {
                echo "ERROR: Country " .$country. " not found.";
@@ -22,12 +24,14 @@
             }
             array_push($dataPoints, array ( "label" => $row["facility"], "y" => $row["cost"]));
          }
-        
+		 $result->free_result();
       } else {
         echo "Call to ShowCountryResourceAllocation failed<br>";
       }
+	  $stmt->close();
 	} else {
 	   echo "not set";
+	}
 	}
 	$conn->close();
 

@@ -5,12 +5,13 @@
 	//open a connection to dbase server 
 	include 'open.php';
 
-	// collect the posted value in a variable called $item
+	if($stmt = $conn->prepare ("CALL ShowMostFreq()")) {
          echo "<h2>";
          echo "most frequented facility for each country";
          echo "</h2>";
 	$dataPoints = array();
-        if ($result = $conn->query("CALL ShowMostFreq();")) {
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
             echo "<table border=\"2px solid black\">";
             echo "<tr><td>country</td><td>most visited facility</td></tr>";
             foreach($result as $row){
@@ -19,11 +20,12 @@
                   echo "<td>".$row["facility"]."</td>";
                   echo "</tr>";
             }
-          
+            $result->free_result();
         } else {
           echo "Call to ShowMostFreq failed<br>";
         }
-      
+        $stmt->close();
+  }    
       $conn->close();
   
   ?>

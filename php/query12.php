@@ -5,8 +5,9 @@
 	//open a connection to dbase server 
 	include 'open.php';
 
-	// collect the posted value in a variable called $item
+	if($stmt = $conn->prepare ("CALL ShowAverageStayRegion(?)")) {
 	$region = $_POST['region'];
+	$stmt->bind_param('s', $region);
          echo "<h2>";
          echo "overnight stay average for facitilies with overnight capactiy in ";
          echo $region;
@@ -14,7 +15,8 @@
 	$dataPoints = array();
 
 	if (!empty($region)) {
-      if ($result = $conn->query("CALL ShowAverageStayRegion('".$region."');")) {
+      if ($stmt->execute()) {
+		$result = $stmt->get_result();
          foreach($result as $row) {
             if ($row["Error"] == NULL and count($row) == 1) {
                echo "ERROR: Region " .$region. " not found.";
@@ -23,12 +25,14 @@
             array_push($dataPoints, array ( "label" => "mental health units", "y" => $row["mental_health_units_avg_stay"]));
             array_push($dataPoints, array ( "label" => "mental hospital", "y" => $row["mental_hospital_avg_stay"]));
          }
-        
+		 $result->free_result();
       } else {
         echo "Call to ShowAverageStayRegion failed<br>";
       }
+	  $stmt->close();
 	} else {
 	   echo "not set";
+	}
 	}
 	$conn->close();
 

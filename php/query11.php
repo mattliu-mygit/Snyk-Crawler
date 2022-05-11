@@ -5,8 +5,9 @@
 	//open a connection to dbase server 
 	include 'open.php';
 
-	// collect the posted value in a variable called $item
+	if($stmt = $conn->prepare ("CALL ShowPercentageDiagnoses(?)")) {
 	$country = $_POST['country'];
+   $stmt->bind_param('s', $country);
          echo "<h2>";
          echo "percentage diagnoses for PTSD, insanity, and depression at mental hospitals for ";
          echo $country;
@@ -14,7 +15,8 @@
 	$dataPoints = array();
 
 	if (!empty($country)) {
-      if ($result = $conn->query("CALL ShowPercentageDiagnoses('".$country."');")) {
+      if ($stmt->execute()) {
+         $result = $stmt->get_result();
          foreach($result as $row) {
             if ($row["Error"] == NULL and count($row) == 1) {
                echo "ERROR: Country " .$country. " not found.";
@@ -29,13 +31,15 @@
          echo "total diagnoses: ";
          echo $row["total_patients"];
          echo "</h3>";
-        
+         $result->free_result();
       } else {
         echo "Call to ShowPercentageDiagnoses failed<br>";
       }
+      $stmt->close();
 	} else {
 	   echo "not set";
 	}
+   }
 	$conn->close();
 
 ?>
