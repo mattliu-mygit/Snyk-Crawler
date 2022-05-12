@@ -18,17 +18,17 @@
 
 	if (!empty($year)) {
       if ($stmt->execute()) {
-		 $result = $stmt->get_result();
+		$result = $stmt->get_result();
          foreach($result as $row) {
             if ($row["Error"] == NULL and count($row) == 1) {
                echo "ERROR: Year " .$year. " not found.";
                return;
             }
-            array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["number_of_male_suicides"]));
-			array_push($dataPoints, array ( "label" => $row["country"], "y" => $row["number_of_female_suicides"]));
-			
-         }
-		 $result->free_result();
+            array_push($dataPoints1, array ( "label" => $row["country"], "y" => $row["number_of_male_suicides"]));
+            array_push($dataPoints2, array ( "label" => $row["country"], "y" => $row["number_of_female_suicides"]));
+						
+        }
+		$result->free_result();
       } else {
         echo "Call to ShowMaleFemaleSuicideRates failed<br>";
       }
