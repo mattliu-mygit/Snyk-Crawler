@@ -18,8 +18,7 @@
         least)
       </option>
       <option value="3">
-        What is ______ (country) allocating its resources to? (greatest to
-        least)
+        What are the top ______ countries with the most suicides committed in 2016?
       </option>
       <option value="4">
         For ______ (country), what percentage of general hospital patients
@@ -80,7 +79,7 @@
           '<!-- (14) --><h2>What is ______ (country) allocating its resources to? (greatest to least)</h2><form action="query14.php" method="post">Country: <input type="text" name="country" /> <br /><input type="submit" /></form><br /><br />';
       } else if (event == "3") {
         div.innerHTML =
-          '<!-- (15) --><h2> What are the top ______ countries with the most suicides committed in 2016?</h2><form action="query15.php" method="post"> Number: <input type="text" name="num" /> <br /> <input type="submit" /></form><br /><br />';
+          '<!-- (15) --><h2> What are the top ______ countries with the most suicides committed in 2016?</h2><form action="query15.php" method="post"> Number: <input type="number" name="num" /> <br /> <input type="submit" /></form><br /><br />';
       } else if (event == "4") {
         div.innerHTML =
           '<!-- (10) --><h2>  For ______ (country), what percentage of general hospital patients were  rebabilitated after being diagnosed?</h2><form action="query10.php" method="post">Country: <input type="text" name="country" /> <br /><input type="submit" /></form><br /><br />';
@@ -89,7 +88,7 @@
           '<!-- (11) --><h2> What percentage of diagnoses were for PTSD, insanity, and depression in mental health hospitals for ______ (country)?</h2><form action="query11.php" method="post">Country: <input type="text" name="country" /> <br /><input type="submit" /></form><br /><br />';
       } else if (event == "6") {
         div.innerHTML =
-          '<!-- (4) --><h2> In ______ (year), how many males vs females committed suicide for each country?</h2><form action="query4.php" method="post">  Year: <input type="text" name="year" /> <br />  <input type="submit" /></form><br /><br />';
+          '<!-- (4) --><h2> In ______ (year), how many males vs females committed suicide for each country?</h2><form action="query4.php" method="post">  Year: <input type="number" name="year" /> <br />  <input type="submit" /></form><br /><br />';
       } else if (event == "7") {
         div.innerHTML =
           '<!-- (1) --><h2>What country has the greatest number of facilities?</h2><form action="query1.php" method="post"> <input type="submit" /></form><br /><br />';
@@ -104,13 +103,13 @@
           '<!-- (9) --><h2>What region has the highest rate of suicide?</h2><form action="query9.php" method="post"><input type="submit" /></form><br /><br />';
       } else if (event == "11") {
         div.innerHTML =
-          '<!-- (8) --><h2>  What countries have total mental health allocations above ______ (total  mental health allocation)?</h2><form action="query8.php" method="post">   Total mental health allocation: <input type="text" name="num" /> <br /> <input type="submit" /></form><br /><br />';
+          '<!-- (8) --><h2>  What countries have total mental health allocations above ______ (total  mental health allocation)?</h2><form action="query8.php" method="post">   Total mental health allocation: <input type="number" name="num" /> <br /> <input type="submit" /></form><br /><br />';
       } else if (event == "12") {
         div.innerHTML =
           '<!-- (13) --><h2> Spending the most on what type of facility is correlated to the lowest suicide rate?</h2><form action="query13.php" method="post"> <input type="submit" /></form><br /><br />';
       } else if (event == "13") {
         div.innerHTML =
-          '<!-- (6) --><h2>What countries have total patient count for all facilities below ______(total patient count)?</h2><form action="query6.php" method="post"> Total patient count: <input type="text" name="num" /> <br /> <input type="submit" /></form><br /><br />';
+          '<!-- (6) --><h2>What countries have total patient count for all facilities below ______(total patient count)?</h2><form action="query6.php" method="post"> Total patient count: <input type="number" name="num" /> <br /> <input type="submit" /></form><br /><br />';
       } else if (event == "14") {
         div.innerHTML =
           '<!-- (5) --><h2>  What is the average amount patients spent in a facility for each country?</h2><form action="query5.php" method="post">  <input type="submit" /></form><br /><br />';

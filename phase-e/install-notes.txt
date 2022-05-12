@@ -1,0 +1,3 @@
+startup.sql should be run to load all of the data.
+Then SetupProcedure.sql should be run in order to load all of the procedures.
+mysql -h dbase.cs.jhu.edu -u username -D dbasename -p < SetupProcedure.sql 

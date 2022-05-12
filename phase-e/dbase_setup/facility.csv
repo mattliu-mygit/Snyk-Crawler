@@ -1,0 +1,483 @@
+type,year,country,avg_stay,cost,unit_count
+mental hospital,2017,Ethiopia,312,0,0.002
+mental hospital,2017,Sri Lanka,249,14,0.005
+mental hospital,2017,Iraq,290,35,0.006
+mental hospital,2017,Somalia,173,4,0.007
+mental hospital,2017,Tunisia,96,24,0.009
+mental hospital,2017,Burundi,312,40,0.01
+mental hospital,2017,Sierra Leone,78,4,0.014
+mental hospital,2017,Nicaragua,286,24,0.016
+mental hospital,2017,Iran (Islamic Republic of),45,8,0.049
+mental hospital,2017,Canada,193,40,0.057
+mental hospital,2017,Trinidad and Tobago,347,26,0.074
+mental hospital,2017,Eswatini,281,17,0.076
+mental hospital,2017,Mauritius,122,8,0.079
+mental hospital,2017,Serbia,151,5,0.079
+mental hospital,2017,Equatorial Guinea,242,0,0.085
+mental hospital,2017,Botswana,197,1,0.091
+mental hospital,2017,The former Yugoslav Republic of Macedonia,16,9,0.14
+mental hospital,2017,Bahrain,287,14,0.15
+mental hospital,2017,Saint Vincent and the Grenadines,214,40,0.91
+mental hospital,2016,Tonga,271,31,0
+mental hospital,2016,Bangladesh,229,44,0.001
+mental hospital,2016,Philippines,294,49,0.001
+mental hospital,2016,Kenya,175,0,0.002
+mental hospital,2016,Uganda,37,3,0.002
+mental hospital,2016,Afghanistan,122,21,0.003
+mental hospital,2016,Myanmar,167,31,0.004
+mental hospital,2016,Guatemala,57,20,0.006
+mental hospital,2016,Pakistan,95,47,0.006
+mental hospital,2016,Mozambique,88,2,0.007
+mental hospital,2016,Senegal,184,3,0.007
+mental hospital,2016,Côte d’Ivoire,254,35,0.009
+mental hospital,2016,India,96,37,0.01
+mental hospital,2016,Peru,209,24,0.01
+mental hospital,2016,Angola,190,2,0.011
+mental hospital,2016,Ghana,119,8,0.011
+mental hospital,2016,United Arab Emirates,271,30,0.011
+mental hospital,2016,Turkey,179,9,0.012
+mental hospital,2016,Malaysia,226,5,0.013
+mental hospital,2016,Togo,76,13,0.013
+mental hospital,2016,Syrian Arab Republic,188,6,0.016
+mental hospital,2016,Rwanda,77,38,0.017
+mental hospital,2016,Singapore,256,20,0.018
+mental hospital,2016,Egypt,102,15,0.019
+mental hospital,2016,Haiti,154,37,0.019
+mental hospital,2016,Indonesia,325,29,0.019
+mental hospital,2016,Eritrea,218,32,0.021
+mental hospital,2016,Madagascar,138,45,0.021
+mental hospital,2016,Nepal,204,36,0.021
+mental hospital,2016,Liberia,236,11,0.022
+mental hospital,2016,Chile,352,24,0.023
+mental hospital,2016,Ecuador,23,32,0.025
+mental hospital,2016,Panama,351,38,0.025
+mental hospital,2016,Zimbabwe,146,36,0.025
+mental hospital,2016,Greece,309,45,0.027
+mental hospital,2016,Thailand,100,41,0.028
+mental hospital,2016,Mexico,273,18,0.029
+mental hospital,2016,Portugal,188,34,0.029
+mental hospital,2016,Paraguay,145,20,0.03
+mental hospital,2016,El Salvador,323,39,0.032
+mental hospital,2016,Libya,12,4,0.032
+mental hospital,2016,Morocco,84,4,0.032
+mental hospital,2016,Yemen,221,45,0.033
+mental hospital,2016,Mongolia,338,16,0.034
+mental hospital,2016,Tajikistan,105,3,0.035
+mental hospital,2016,Qatar,17,38,0.038
+mental hospital,2016,Costa Rica,326,38,0.042
+mental hospital,2016,Viet Nam,327,12,0.043
+mental hospital,2016,Algeria,287,31,0.048
+mental hospital,2016,Gabon,176,28,0.052
+mental hospital,2016,Jordan,177,14,0.055
+mental hospital,2016,Guinea-Bissau,60,36,0.056
+mental hospital,2016,Zambia,73,29,0.062
+mental hospital,2016,Albania,129,21,0.068
+mental hospital,2016,Brazil,197,43,0.069
+mental hospital,2016,Bolivia (Plurinational State of),215,44,0.075
+mental hospital,2016,Saudi Arabia,90,7,0.079
+mental hospital,2016,Uzbekistan,64,26,0.081
+mental hospital,2016,Kyrgyzstan,308,37,0.085
+mental hospital,2016,Azerbaijan,336,48,0.11
+mental hospital,2016,Fiji,112,41,0.11
+mental hospital,2016,South Africa,151,34,0.12
+mental hospital,2016,Guyana,313,18,0.13
+mental hospital,2016,Poland,299,30,0.13
+mental hospital,2016,Lithuania,341,42,0.14
+mental hospital,2016,Ukraine,297,21,0.14
+mental hospital,2016,Estonia,198,41,0.15
+mental hospital,2016,Israel,94,38,0.16
+mental hospital,2016,Bulgaria,150,39,0.17
+mental hospital,2016,Croatia,140,0,0.17
+mental hospital,2016,Cuba,230,27,0.17
+mental hospital,2016,Romania,64,41,0.17
+mental hospital,2016,United States of America,236,33,0.19
+mental hospital,2016,Belarus,198,30,0.2
+mental hospital,2016,Georgia,235,6,0.23
+mental hospital,2016,Slovenia,33,35,0.24
+mental hospital,2016,Iceland,123,13,0.3
+mental hospital,2016,Montenegro,255,13,0.32
+mental hospital,2016,Uruguay,114,4,0.32
+mental hospital,2016,Republic of Korea,118,15,0.36
+mental hospital,2016,Samoa,261,37,0.52
+mental hospital,2016,Saint Lucia,42,5,0.56
+mental hospital,2016,Norway,292,22,0.58
+mental hospital,2016,Ireland,168,44,0.62
+mental hospital,2016,Argentina,56,7,0.94
+mental hospital,2016,Grenada,21,33,0.94
+mental hospital,2016,Antigua and Barbuda,188,3,1
+mental hospital,2016,Seychelles,167,39,1.07
+mental hospital,2016,Colombia,78,21,1.99
+mental hospital,2016,Japan,211,24,8.31
+mental hospital,2015,United Republic of Tanzania,239,30,0.004
+mental hospital,2015,Jamaica,297,19,0.035
+mental hospital,2015,China,345,32,0.068
+mental hospital,2015,Australia,326,18,0.071
+mental hospital,2015,Republic of Moldova,76,12,0.074
+mental hospital,2015,Bosnia and Herzegovina,297,13,0.085
+mental hospital,2015,Lebanon,283,47,0.085
+mental hospital,2015,Cyprus,237,4,0.086
+mental hospital,2015,Austria,84,47,0.092
+mental hospital,2015,Russian Federation,147,5,0.14
+mental hospital,2015,Czechia,242,20,0.17
+mental hospital,2015,Luxembourg,34,8,0.18
+mental hospital,2015,Spain,144,20,0.18
+mental hospital,2015,Netherlands,100,48,0.2
+mental hospital,2015,Bahamas,335,8,0.26
+mental hospital,2015,Latvia,279,46,0.3
+mental hospital,2015,Germany,18,29,0.34
+mental hospital,2015,Barbados,60,13,0.35
+mental hospital,2015,Switzerland,148,19,0.59
+mental hospital,2015,Kiribati,70,3,0.89
+mental hospital,2014,Honduras,56,9,0.022
+mental hospital,2013,Belgium,110,24,0.47
+outpatient facility,2017,Somalia,0,9,0.007
+outpatient facility,2017,Burundi,0,39,0.01
+outpatient facility,2017,Sierra Leone,0,22,0.014
+outpatient facility,2017,Ethiopia,0,41,0.062
+outpatient facility,2017,The former Yugoslav Republic of Macedonia,0,14,0.096
+outpatient facility,2017,Serbia,0,25,0.14
+outpatient facility,2017,Botswana,0,0,0.27
+outpatient facility,2017,Canada,0,2,0.33
+outpatient facility,2017,Equatorial Guinea,0,16,0.34
+outpatient facility,2017,Trinidad and Tobago,0,27,0.66
+outpatient facility,2017,Nicaragua,0,22,0.69
+outpatient facility,2017,Bahrain,0,22,1.24
+outpatient facility,2017,Sri Lanka,0,21,1.33
+outpatient facility,2017,Maldives,0,15,1.43
+outpatient facility,2017,Mauritius,0,17,1.43
+outpatient facility,2017,Iraq,0,43,1.71
+outpatient facility,2017,Saint Vincent and the Grenadines,0,29,3.65
+outpatient facility,2017,Iran (Islamic Republic of),0,10,5.09
+outpatient facility,2017,Niue,0,8,61.39
+outpatient facility,2017,Finland,0,36,7.52
+outpatient facility,2016,Afghanistan,0,13,0.006
+outpatient facility,2016,Chad,0,36,0.007
+outpatient facility,2016,South Sudan,0,7,0.008
+outpatient facility,2016,Bolivia (Plurinational State of),0,26,0.009
+outpatient facility,2016,Viet Nam,0,44,0.009
+outpatient facility,2016,Côte d’Ivoire,0,5,0.017
+outpatient facility,2016,Congo,0,1,0.02
+outpatient facility,2016,Egypt,0,43,0.031
+outpatient facility,2016,Senegal,0,10,0.04
+outpatient facility,2016,Togo,0,27,0.04
+outpatient facility,2016,Algeria,0,30,0.048
+outpatient facility,2016,Ukraine,0,1,0.049
+outpatient facility,2016,Gabon,0,42,0.052
+outpatient facility,2016,Bangladesh,0,29,0.055
+outpatient facility,2016,Guinea-Bissau,0,25,0.056
+outpatient facility,2016,Zimbabwe,0,32,0.057
+outpatient facility,2016,Yemen,0,26,0.063
+outpatient facility,2016,Mongolia,0,3,0.067
+outpatient facility,2016,Kenya,0,3,0.068
+outpatient facility,2016,Myanmar,0,13,0.073
+outpatient facility,2016,Namibia,0,5,0.082
+outpatient facility,2016,Uzbekistan,0,11,0.084
+outpatient facility,2016,Nepal,0,8,0.11
+outpatient facility,2016,South Africa,0,14,0.11
+outpatient facility,2016,Belarus,0,45,0.12
+outpatient facility,2016,Haiti,0,49,0.13
+outpatient facility,2016,Mexico,0,35,0.13
+outpatient facility,2016,Azerbaijan,0,5,0.16
+outpatient facility,2016,Tajikistan,0,41,0.16
+outpatient facility,2016,Peru,0,38,0.17
+outpatient facility,2016,India,0,49,0.18
+outpatient facility,2016,Turkey,0,35,0.19
+outpatient facility,2016,Zambia,0,23,0.2
+outpatient facility,2016,Philippines,0,16,0.21
+outpatient facility,2016,Singapore,0,10,0.22
+outpatient facility,2016,Eritrea,0,48,0.23
+outpatient facility,2016,Ecuador,0,22,0.24
+outpatient facility,2016,Guyana,0,47,0.26
+outpatient facility,2016,Colombia,0,14,0.29
+outpatient facility,2016,Bulgaria,0,10,0.31
+outpatient facility,2016,Malaysia,0,2,0.32
+outpatient facility,2016,Qatar,0,21,0.34
+outpatient facility,2016,Morocco,0,24,0.37
+outpatient facility,2016,United States of America,0,15,0.37
+outpatient facility,2016,Rwanda,0,3,0.4
+outpatient facility,2016,Albania,0,29,0.41
+outpatient facility,2016,Jordan,0,33,0.51
+outpatient facility,2016,Sao Tome and Principe,0,45,0.51
+outpatient facility,2016,Saudi Arabia,0,7,0.51
+outpatient facility,2016,United Arab Emirates,0,10,0.52
+outpatient facility,2016,Liberia,0,29,0.62
+outpatient facility,2016,Georgia,0,8,0.68
+outpatient facility,2016,Portugal,0,32,0.7
+outpatient facility,2016,El Salvador,0,9,0.73
+outpatient facility,2016,Mozambique,0,1,0.77
+outpatient facility,2016,Chile,0,35,0.84
+outpatient facility,2016,Romania,0,19,0.91
+outpatient facility,2016,Tonga,0,31,0.94
+outpatient facility,2016,Uganda,0,27,0.94
+outpatient facility,2016,Cambodia,0,38,1.13
+outpatient facility,2016,Kyrgyzstan,0,10,1.16
+outpatient facility,2016,Thailand,0,23,1.3
+outpatient facility,2016,Norway,0,37,1.31
+outpatient facility,2016,Greece,0,2,1.35
+outpatient facility,2016,Armenia,0,48,1.37
+outpatient facility,2016,Paraguay,0,37,1.42
+outpatient facility,2016,Guatemala,0,42,1.43
+outpatient facility,2016,Brazil,0,42,1.49
+outpatient facility,2016,Niger,0,18,1.69
+outpatient facility,2016,Costa Rica,0,30,1.71
+outpatient facility,2016,Argentina,0,4,1.72
+outpatient facility,2016,Dominican Republic,0,30,1.75
+outpatient facility,2016,Republic of Korea,0,9,1.79
+outpatient facility,2016,Grenada,0,20,10.3
+outpatient facility,2016,Samoa,0,35,12.39
+outpatient facility,2016,Estonia,0,13,14.82
+outpatient facility,2016,Saint Lucia,0,37,19.75
+outpatient facility,2016,Seychelles,0,11,2.13
+outpatient facility,2016,Belize,0,49,2.23
+outpatient facility,2016,Syrian Arab Republic,0,24,2.26
+outpatient facility,2016,Pakistan,0,28,2.3
+outpatient facility,2016,Ghana,0,30,2.38
+outpatient facility,2016,Brunei Darussalam,0,11,2.63
+outpatient facility,2016,Vanuatu,0,27,2.65
+outpatient facility,2016,Panama,0,26,2.7
+outpatient facility,2016,Cuba,0,49,2.93
+outpatient facility,2016,Iceland,0,7,3.03
+outpatient facility,2016,Croatia,0,16,3.09
+outpatient facility,2016,Poland,0,16,3.21
+outpatient facility,2016,Fiji,0,7,3.36
+outpatient facility,2016,Bhutan,0,48,3.56
+outpatient facility,2016,Ireland,0,44,3.83
+outpatient facility,2016,Lithuania,0,9,3.92
+outpatient facility,2016,Monaco,0,17,5.22
+outpatient facility,2016,Cook Islands,0,40,5.73
+outpatient facility,2016,Slovenia,0,25,5.83
+outpatient facility,2016,Timor-Leste,0,35,6.53
+outpatient facility,2016,Japan,0,18,7.22
+outpatient facility,2016,Hungary,0,8,8.27
+outpatient facility,2016,Nauru,0,47,8.88
+outpatient facility,2015,United Republic of Tanzania,0,32,0.067
+outpatient facility,2015,Germany,0,32,0.077
+outpatient facility,2015,Bahamas,0,17,0.52
+outpatient facility,2015,Lebanon,0,25,0.72
+outpatient facility,2015,Cyprus,0,6,0.86
+outpatient facility,2015,Kiribati,0,14,0.89
+outpatient facility,2015,Republic of Moldova,0,4,1.06
+outpatient facility,2015,Bosnia and Herzegovina,0,26,1.44
+outpatient facility,2015,Czechia,0,8,10.95
+outpatient facility,2015,Spain,0,49,2.05
+outpatient facility,2015,Russian Federation,0,39,2.33
+outpatient facility,2015,Latvia,0,4,20.48
+outpatient facility,2015,Luxembourg,0,23,3.18
+outpatient facility,2015,Austria,0,18,3.46
+outpatient facility,2015,Italy,0,4,3.58
+outpatient facility,2015,Barbados,0,34,4.57
+outpatient facility,2015,Jamaica,0,16,6.09
+outpatient facility,2014,Honduras,0,18,0.15
+outpatient facility,2013,Mauritania,0,20,0.048
+mental health unit,2017,Nicaragua,169,44,0.016
+mental health unit,2017,Central African Republic,34,19,0.022
+mental health unit,2017,Ethiopia,341,15,0.052
+mental health unit,2017,Iraq,255,47,0.061
+mental health unit,2017,Mauritius,73,22,0.079
+mental health unit,2017,Comoros,299,0,0.13
+mental health unit,2017,Sri Lanka,96,48,0.15
+mental health unit,2017,Iran (Islamic Republic of),104,29,0.2
+mental health unit,2017,Botswana,5,30,0.23
+mental health unit,2017,Maldives,198,41,0.24
+mental health unit,2017,Eswatini,221,49,0.38
+mental health unit,2017,Canada,25,34,0.4
+mental health unit,2017,Serbia,0,33,0.41
+mental health unit,2017,Cabo Verde,84,25,0.56
+mental health unit,2017,The former Yugoslav Republic of Macedonia,3,24,0.72
+mental health unit,2017,Finland,71,30,0.75
+mental health unit,2017,Saint Kitts and Nevis,284,40,3.68
+mental health unit,2016,Cambodia,165,30,0.006
+mental health unit,2016,Guatemala,189,42,0.006
+mental health unit,2016,Mali,13,21,0.006
+mental health unit,2016,Mexico,44,38,0.006
+mental health unit,2016,Chad,107,22,0.007
+mental health unit,2016,Guinea,141,31,0.008
+mental health unit,2016,South Sudan,38,43,0.008
+mental health unit,2016,Bolivia (Plurinational State of),343,11,0.009
+mental health unit,2016,Haiti,74,12,0.009
+mental health unit,2016,Afghanistan,190,33,0.012
+mental health unit,2016,Côte d’Ivoire,182,21,0.013
+mental health unit,2016,Saudi Arabia,321,5,0.013
+mental health unit,2016,Uzbekistan,281,1,0.013
+mental health unit,2016,Syrian Arab Republic,338,23,0.016
+mental health unit,2016,Viet Nam,193,40,0.017
+mental health unit,2016,Azerbaijan,237,42,0.021
+mental health unit,2016,Zimbabwe,345,10,0.025
+mental health unit,2016,Yemen,245,37,0.026
+mental health unit,2016,Senegal,330,32,0.027
+mental health unit,2016,India,185,9,0.03
+mental health unit,2016,Paraguay,269,31,0.03
+mental health unit,2016,Kenya,334,44,0.032
+mental health unit,2016,Uganda,98,1,0.032
+mental health unit,2016,Jordan,225,37,0.033
+mental health unit,2016,Niger,26,31,0.033
+mental health unit,2016,Bangladesh,344,48,0.035
+mental health unit,2016,Qatar,301,25,0.038
+mental health unit,2016,Mozambique,52,0,0.039
+mental health unit,2016,Congo,191,37,0.04
+mental health unit,2016,Costa Rica,0,16,0.042
+mental health unit,2016,Myanmar,136,13,0.042
+mental health unit,2016,Madagascar,302,20,0.045
+mental health unit,2016,Slovenia,305,38,0.048
+mental health unit,2016,Ukraine,327,35,0.052
+mental health unit,2016,United Arab Emirates,263,11,0.055
+mental health unit,2016,Peru,161,35,0.057
+mental health unit,2016,Zambia,336,17,0.062
+mental health unit,2016,Belarus,259,19,0.063
+mental health unit,2016,Nepal,249,40,0.063
+mental health unit,2016,Liberia,69,1,0.067
+mental health unit,2016,Albania,8,41,0.068
+mental health unit,2016,Algeria,337,49,0.068
+mental health unit,2016,Armenia,246,30,0.069
+mental health unit,2016,Singapore,268,45,0.072
+mental health unit,2016,South Africa,73,8,0.072
+mental health unit,2016,Dominican Republic,341,1,0.076
+mental health unit,2016,Georgia,246,47,0.076
+mental health unit,2016,Morocco,43,27,0.08
+mental health unit,2016,Timor-Leste,100,16,0.081
+mental health unit,2016,Namibia,216,47,0.082
+mental health unit,2016,Philippines,120,32,0.083
+mental health unit,2016,Indonesia,257,46,0.1
+mental health unit,2016,Brazil,80,40,0.11
+mental health unit,2016,Togo,130,16,0.11
+mental health unit,2016,Bhutan,274,14,0.13
+mental health unit,2016,Guyana,171,9,0.13
+mental health unit,2016,Tajikistan,227,14,0.13
+mental health unit,2016,Israel,119,22,0.14
+mental health unit,2016,Kyrgyzstan,199,3,0.14
+mental health unit,2016,Cuba,144,7,0.15
+mental health unit,2016,Malaysia,7,4,0.15
+mental health unit,2016,Thailand,28,48,0.15
+mental health unit,2016,Chile,36,24,0.17
+mental health unit,2016,Ecuador,122,26,0.17
+mental health unit,2016,Eritrea,68,5,0.21
+mental health unit,2016,Colombia,299,26,0.22
+mental health unit,2016,El Salvador,70,38,0.25
+mental health unit,2016,Poland,346,25,0.26
+mental health unit,2016,Panama,38,44,0.28
+mental health unit,2016,Burkina Faso,250,30,0.29
+mental health unit,2016,Portugal,285,7,0.29
+mental health unit,2016,Bulgaria,54,38,0.31
+mental health unit,2016,Montenegro,210,36,0.32
+mental health unit,2016,Greece,335,42,0.33
+mental health unit,2016,Fiji,121,8,0.34
+mental health unit,2016,United States of America,72,4,0.35
+mental health unit,2016,Republic of Korea,210,19,0.39
+mental health unit,2016,Romania,102,24,0.39
+mental health unit,2016,Rwanda,213,23,0.4
+mental health unit,2016,Pakistan,93,27,0.42
+mental health unit,2016,Japan,0,49,0.45
+mental health unit,2016,Turkey,309,4,0.45
+mental health unit,2016,Mongolia,235,37,0.47
+mental health unit,2016,Brunei Darussalam,271,40,0.48
+mental health unit,2016,Norway,325,18,0.48
+mental health unit,2016,Sao Tome and Principe,73,38,0.51
+mental health unit,2016,Croatia,11,15,0.52
+mental health unit,2016,Samoa,222,15,0.52
+mental health unit,2016,New Zealand,238,21,0.61
+mental health unit,2016,Ireland,237,46,0.62
+mental health unit,2016,Estonia,70,0,0.68
+mental health unit,2016,Lithuania,172,28,0.68
+mental health unit,2016,Uruguay,211,24,0.7
+mental health unit,2016,Vanuatu,38,11,0.76
+mental health unit,2016,Grenada,22,19,0.94
+mental health unit,2016,Tonga,112,32,0.94
+mental health unit,2016,Argentina,267,44,1.07
+mental health unit,2016,Ghana,225,14,1.09
+mental health unit,2016,Belize,96,17,1.95
+mental health unit,2016,Monaco,93,36,2.61
+mental health unit,2016,Hungary,63,36,2.65
+mental health unit,2016,Iceland,4,0,4.54
+mental health unit,2015,United Republic of Tanzania,184,5,0.009
+mental health unit,2015,Jamaica,125,42,0.07
+mental health unit,2015,Republic of Moldova,117,12,0.074
+mental health unit,2015,Lebanon,289,3,0.14
+mental health unit,2015,Latvia,329,26,0.15
+mental health unit,2015,Cyprus,71,12,0.17
+mental health unit,2015,Switzerland,153,10,0.25
+mental health unit,2015,Bahamas,229,9,0.26
+mental health unit,2015,Austria,146,10,0.27
+mental health unit,2015,Czechia,245,38,0.28
+mental health unit,2015,Barbados,235,2,0.35
+mental health unit,2015,Germany,35,27,0.49
+mental health unit,2015,Bosnia and Herzegovina,14,22,0.54
+mental health unit,2015,Italy,187,48,0.59
+mental health unit,2015,Australia,173,35,0.6
+mental health unit,2015,Luxembourg,95,45,0.71
+mental health unit,2015,Spain,329,31,1.03
+mental health unit,2013,Mauritania,84,33,0.024
+mental health unit,2013,Belgium,219,33,0.56
+day treatment facility,2017,Iraq,0,25,0.003
+day treatment facility,2017,Burundi,0,49,0.029
+day treatment facility,2017,Botswana,0,11,0.045
+day treatment facility,2017,Trinidad and Tobago,0,49,0.074
+day treatment facility,2017,Sri Lanka,0,19,0.13
+day treatment facility,2017,Iran (Islamic Republic of),0,22,0.28
+day treatment facility,2017,Serbia,0,36,0.44
+day treatment facility,2017,Bahrain,0,44,0.73
+day treatment facility,2017,Saint Kitts and Nevis,0,23,1.84
+day treatment facility,2017,Marshall Islands,0,44,1.89
+day treatment facility,2017,Maldives,0,27,2.15
+day treatment facility,2017,Saint Vincent and the Grenadines,0,32,35.63
+day treatment facility,2017,Niue,0,11,61.39
+day treatment facility,2016,Philippines,0,39,0.002
+day treatment facility,2016,Madagascar,0,30,0.004
+day treatment facility,2016,Zimbabwe,0,37,0.006
+day treatment facility,2016,Thailand,0,27,0.007
+day treatment facility,2016,Egypt,0,44,0.011
+day treatment facility,2016,Paraguay,0,24,0.015
+day treatment facility,2016,Peru,0,15,0.016
+day treatment facility,2016,Ghana,0,34,0.018
+day treatment facility,2016,Dominican Republic,0,22,0.019
+day treatment facility,2016,Niger,0,32,0.019
+day treatment facility,2016,Hungary,0,38,0.02
+day treatment facility,2016,Mozambique,0,9,0.021
+day treatment facility,2016,Côte d’Ivoire,0,34,0.022
+day treatment facility,2016,India,0,7,0.023
+day treatment facility,2016,Panama,0,34,0.025
+day treatment facility,2016,Armenia,0,36,0.034
+day treatment facility,2016,Kyrgyzstan,0,34,0.051
+day treatment facility,2016,Uzbekistan,0,9,0.052
+day treatment facility,2016,Mexico,0,33,0.079
+day treatment facility,2016,Ireland,0,47,0.085
+day treatment facility,2016,Azerbaijan,0,39,0.094
+day treatment facility,2016,Georgia,0,36,0.1
+day treatment facility,2016,Morocco,0,26,0.1
+day treatment facility,2016,Fiji,0,34,0.11
+day treatment facility,2016,Qatar,0,10,0.11
+day treatment facility,2016,Costa Rica,0,21,0.12
+day treatment facility,2016,Republic of Korea,0,26,0.13
+day treatment facility,2016,Singapore,0,28,0.16
+day treatment facility,2016,Belarus,0,23,0.28
+day treatment facility,2016,Belize,0,7,0.28
+day treatment facility,2016,Romania,0,15,0.28
+day treatment facility,2016,Chile,0,38,0.32
+day treatment facility,2016,Cuba,0,14,0.44
+day treatment facility,2016,Portugal,0,8,0.52
+day treatment facility,2016,Samoa,0,20,0.52
+day treatment facility,2016,Uruguay,0,37,0.61
+day treatment facility,2016,Brunei Darussalam,0,18,0.72
+day treatment facility,2016,Poland,0,5,0.72
+day treatment facility,2016,Croatia,0,4,0.8
+day treatment facility,2016,Norway,0,35,0.88
+day treatment facility,2016,Seychelles,0,12,1.07
+day treatment facility,2016,Greece,0,0,1.32
+day treatment facility,2016,Ukraine,0,3,1.58
+day treatment facility,2016,Estonia,0,7,17.18
+day treatment facility,2016,Slovenia,0,8,2.12
+day treatment facility,2016,Ecuador,0,30,3.01
+day treatment facility,2016,Malaysia,0,27,3.12
+day treatment facility,2016,Japan,0,40,3.76
+day treatment facility,2016,Monaco,0,1,5.22
+day treatment facility,2016,Cook Islands,0,22,5.73
+day treatment facility,2016,Bulgaria,0,37,5.94
+day treatment facility,2015,Lebanon,0,24,0.085
+day treatment facility,2015,Jamaica,0,2,0.17
+day treatment facility,2015,Russian Federation,0,8,0.2
+day treatment facility,2015,Bahamas,0,34,0.26
+day treatment facility,2015,Cyprus,0,1,0.52
+day treatment facility,2015,Luxembourg,0,23,1.06
+day treatment facility,2015,Australia,0,25,1.11
+day treatment facility,2015,Italy,0,5,1.41
+day treatment facility,2015,Austria,0,4,2.62
+day treatment facility,2015,Latvia,0,29,56.76
